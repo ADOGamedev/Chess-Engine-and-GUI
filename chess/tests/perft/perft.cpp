@@ -101,7 +101,7 @@ int PerftTester::perft(GameState& state, const int depth, const int initial_dept
     move_legalizer.calculate_pins_and_checks();
     move_gen.update_available_legal_moves();
 
-    int move_count = move_gen.available_moves_count;
+    int move_count = move_gen.available_moves.count;
     int positions_count = 0;
 
     if (depth == 1) {
@@ -109,7 +109,7 @@ int PerftTester::perft(GameState& state, const int depth, const int initial_dept
     }
 
     for (int move_index = 0; move_index < move_count; move_index++) {
-        Move move = move_gen.available_moves[move_index];
+        Move move = move_gen.available_moves.array[move_index];
 
         MoveExecutor::do_move(move, &state);
 

@@ -16,6 +16,8 @@
 #include "../rays/rays_in_between.h"
 #include "../magic_numbers/magics.h"
 
+#include "../constants/MovesArray.h"
+
 class MoveLegalizer;
 class MovesLookupsGen;
 class GameState;
@@ -44,7 +46,6 @@ public:
 private:
     void update_available_moves_for_square(const Square square);
     void add_all_promotions_to_available_moves(const Move& move);
-    void add_move_to_available_moves(const Move& move);
 
     void include_castling_if_possible();
     bool is_castling_path_empty(const CastlingType castling_type) const;
@@ -65,7 +66,5 @@ public:
 
     GameState* state;
     uint64_t curr_moves = 0ULL;
-    std::array<Move, MAX_POSSIBLE_AVAILABLE_MOVES> available_moves;
-    int available_moves_count = 0;
-
+    MovesArray<MAX_POSSIBLE_AVAILABLE_MOVES> available_moves;
 };
