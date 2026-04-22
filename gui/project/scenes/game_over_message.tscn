@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://bbwu80n0hwrn4"]
+
+[ext_resource type="Texture2D" uid="uid://puh0mf2q1jdh" path="res://assets/panel.png" id="1_5bfor"]
+[ext_resource type="Script" uid="uid://dgllols5jja5v" path="res://game_over_message.gd" id="1_luphr"]
+[ext_resource type="FontFile" uid="uid://c0y1xkb5amm44" path="res://assets/Jersey10-Regular.ttf" id="2_luphr"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3u2xi"]
+texture = ExtResource("1_5bfor")
+
+[sub_resource type="FontVariation" id="FontVariation_6pl33"]
+base_font = ExtResource("2_luphr")
+
+[node name="game_over_message" type="Control" unique_id=1253653963]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_luphr")
+
+[node name="dark_background" type="ColorRect" parent="." unique_id=1678751706]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.262745)
+
+[node name="background" type="PanelContainer" parent="." unique_id=613985327]
+texture_filter = 1
+clip_contents = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -80.0
+offset_right = 200.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_3u2xi")
+
+[node name="game_over_margin" type="MarginContainer" parent="background" unique_id=1996772468]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 5
+
+[node name="game_over_label" type="Label" parent="background/game_over_margin" unique_id=502006861]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.411765, 0.321569, 0.211765, 1)
+theme_override_colors/font_outline_color = Color(0.909804, 0.788235, 0.635294, 1)
+theme_override_constants/line_spacing = -6
+theme_override_fonts/font = SubResource("FontVariation_6pl33")
+theme_override_font_sizes/font_size = 41
+text = "Game over label"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3

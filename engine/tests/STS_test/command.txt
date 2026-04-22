@@ -1,0 +1,1 @@
+./STS_Rating_v3 -f "STS1-STS15_LAN.epd" --proto uci -h 128 --getrating -e "D:/My projects/Chess Engine and GUI/engine/engine_versions2/engine_killers.exe" 

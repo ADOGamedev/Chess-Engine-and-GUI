@@ -1,0 +1,3 @@
+ADOCE KILLERS: 1977.44 +/- 30.06 (vs STOCKFISH 1900)
+ADOCE KILLERS: ~1997 (vs STOCKFISH 2000)
+I can conclude that on 20/4/26 I'm confident to say ADOCE is 2000 ELO

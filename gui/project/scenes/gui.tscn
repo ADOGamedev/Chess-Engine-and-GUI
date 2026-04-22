@@ -1,0 +1,538 @@
+[gd_scene format=3 uid="uid://dmin5hg7bfmvl"]
+
+[ext_resource type="Script" uid="uid://hwffxnibnkwv" path="res://src/gui/gui.gd" id="1_vwnqe"]
+[ext_resource type="FontFile" uid="uid://c0y1xkb5amm44" path="res://assets/Jersey10-Regular.ttf" id="2_q8o8l"]
+[ext_resource type="Texture2D" uid="uid://drgb3qjxs4cbr" path="res://assets/gui_panel.png" id="2_s1fa6"]
+[ext_resource type="Texture2D" uid="uid://2iex26dr2try" path="res://assets/black_button.png" id="3_axmix"]
+[ext_resource type="Texture2D" uid="uid://tjd0c0n8x3ge" path="res://assets/play_button.png" id="3_cor1f"]
+[ext_resource type="Texture2D" uid="uid://gm2bpwjwt1ss" path="res://assets/small_button.png" id="3_nf4fc"]
+[ext_resource type="Texture2D" uid="uid://ci1g1llc15k3v" path="res://assets/black_button_hover.png" id="4_7u6ry"]
+[ext_resource type="Texture2D" uid="uid://cshw2tivfklrt" path="res://assets/play_button_hover.png" id="4_u77ya"]
+[ext_resource type="Texture2D" uid="uid://c1otxiciq5fb6" path="res://assets/small_button_hover.png" id="4_vwnqe"]
+[ext_resource type="Texture2D" uid="uid://vrjj23mlp803" path="res://assets/any_color_button.png" id="5_e23it"]
+[ext_resource type="Texture2D" uid="uid://bchc46gqybbgv" path="res://assets/any_color_button_hover.png" id="6_hl6be"]
+[ext_resource type="Texture2D" uid="uid://bb1sid16a1857" path="res://assets/white_button.png" id="7_sbet0"]
+[ext_resource type="Texture2D" uid="uid://emmpi88fr03w" path="res://assets/white_button_hover.png" id="8_k81xp"]
+[ext_resource type="Texture2D" uid="uid://tjxaj15nh51n" path="res://assets/check_box_on.png" id="12_737bf"]
+[ext_resource type="Texture2D" uid="uid://cvi2b73urrqe1" path="res://assets/check_box_off.png" id="13_ni0mf"]
+[ext_resource type="Texture2D" uid="uid://csovrchebd2mr" path="res://assets/back_button_hover.png" id="14_s1fa6"]
+[ext_resource type="Texture2D" uid="uid://dy44eotj62uwg" path="res://assets/back_button.png" id="16_onkih"]
+[ext_resource type="Texture2D" uid="uid://0atgbgmmfnka" path="res://assets/next_button.png" id="17_ni0mf"]
+[ext_resource type="Texture2D" uid="uid://dfepiqsace2ux" path="res://assets/next_button_hover.png" id="18_gbpkt"]
+[ext_resource type="Texture2D" uid="uid://bq2cppl0x31f7" path="res://assets/settings_button.png" id="20_s1fa6"]
+[ext_resource type="Texture2D" uid="uid://c78h77l6ea147" path="res://assets/settings_button_hover.png" id="21_xt5h2"]
+[ext_resource type="Texture2D" uid="uid://bu16by0qbbnud" path="res://assets/top_resign_button.png" id="22_onkih"]
+[ext_resource type="Texture2D" uid="uid://553dxnvogc6l" path="res://assets/top_resign_button_hover.png" id="23_imf4q"]
+[ext_resource type="Texture2D" uid="uid://8tro6k6pyybf" path="res://assets/bottom_resign_button.png" id="24_mpgi2"]
+[ext_resource type="Texture2D" uid="uid://cjam32ukc362h" path="res://assets/bottom_resign_button_hover.png" id="25_dkyfh"]
+
+[sub_resource type="FontVariation" id="FontVariation_cor1f"]
+base_font = ExtResource("2_q8o8l")
+
+[sub_resource type="FontVariation" id="FontVariation_78ls4"]
+base_font = ExtResource("2_q8o8l")
+
+[sub_resource type="FontVariation" id="FontVariation_gk0bp"]
+base_font = ExtResource("2_q8o8l")
+baseline_offset = 0.035
+
+[sub_resource type="FontVariation" id="FontVariation_jf511"]
+base_font = ExtResource("2_q8o8l")
+spacing_top = 4
+
+[node name="gui" type="Control" unique_id=850441619]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_vwnqe")
+
+[node name="panel" type="TextureRect" parent="." unique_id=13249674]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -512.0
+offset_bottom = 640.0
+grow_horizontal = 0
+mouse_filter = 2
+texture = ExtResource("2_s1fa6")
+
+[node name="gui_margin" type="MarginContainer" parent="." unique_id=1137463013]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 640
+
+[node name="gui_v_box_cont" type="VBoxContainer" parent="gui_margin" unique_id=1048522688]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="timer_top_margin" type="MarginContainer" parent="gui_margin/gui_v_box_cont" unique_id=310903789]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 19
+theme_override_constants/margin_bottom = -1
+
+[node name="timer_top" type="Label" parent="gui_margin/gui_v_box_cont/timer_top_margin" unique_id=62988485]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.411765, 0.321569, 0.211765, 1)
+theme_override_colors/font_shadow_color = Color(0.301961, 0.235294, 0.156863, 1)
+theme_override_colors/font_outline_color = Color(0.909804, 0.788235, 0.635294, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 18
+theme_override_constants/shadow_outline_size = 13
+theme_override_fonts/font = SubResource("FontVariation_cor1f")
+theme_override_font_sizes/font_size = 80
+text = "00:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="time_modes_margin" type="MarginContainer" parent="gui_margin/gui_v_box_cont" unique_id=1969392441]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.24
+theme_override_constants/margin_left = 120
+theme_override_constants/margin_right = 120
+
+[node name="time_modes_h_box_cont" type="HBoxContainer" parent="gui_margin/gui_v_box_cont/time_modes_margin" unique_id=1918919110]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="bullet_v_box_cont" type="VBoxContainer" parent="gui_margin/gui_v_box_cont/time_modes_margin/time_modes_h_box_cont" unique_id=2039182577]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="bullet" type="Label" parent="gui_margin/gui_v_box_cont/time_modes_margin/time_modes_h_box_cont/bullet_v_box_cont" unique_id=717971884]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.301961, 0.235294, 0.156863, 1)
+theme_override_fonts/font = SubResource("FontVariation_78ls4")
+theme_override_font_sizes/font_size = 31
+text = "Bullet"
+horizontal_alignment = 1
+
+[node name="one_minute_button" type="TextureButton" parent="gui_margin/gui_v_box_cont/time_modes_margin/time_modes_h_box_cont/bullet_v_box_cont" unique_id=690624238]
+layout_mode = 2
+texture_normal = ExtResource("3_nf4fc")
+texture_hover = ExtResource("4_vwnqe")
+
+[node name="one_minute" type="Label" parent="gui_margin/gui_v_box_cont/time_modes_margin/time_modes_h_box_cont/bullet_v_box_cont/one_minute_button" unique_id=1370082548]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.929412, 0.839216, 0.72549, 1)
+theme_override_fonts/font = SubResource("FontVariation_gk0bp")
+theme_override_font_sizes/font_size = 26
+text = "1min"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="one_minute_one_button" type="TextureButton" parent="gui_margin/gui_v_box_cont/time_modes_margin/time_modes_h_box_cont/bullet_v_box_cont" unique_id=1883424172]
+layout_mode = 2
+texture_normal = ExtResource("3_nf4fc")
+texture_hover = ExtResource("4_vwnqe")
+
+[node name="one_minute_one" type="Label" parent="gui_margin/gui_v_box_cont/time_modes_margin/time_modes_h_box_cont/bullet_v_box_cont/one_minute_one_button" unique_id=752769574]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.929412, 0.839216, 0.72549, 1)
+theme_override_fonts/font = SubResource("FontVariation_gk0bp")
+theme_override_font_sizes/font_size = 26
+text = "1 | 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="two_minute_one_button" type="TextureButton" parent="gui_margin/gui_v_box_cont/time_modes_margin/time_modes_h_box_cont/bullet_v_box_cont" unique_id=371972091]
+layout_mode = 2
+texture_normal = ExtResource("3_nf4fc")
+texture_hover = ExtResource("4_vwnqe")
+
+[node name="two_minute_one" type="Label" parent="gui_margin/gui_v_box_cont/time_modes_margin/time_modes_h_box_cont/bullet_v_box_cont/two_minute_one_button" unique_id=1228439373]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.929412, 0.839216, 0.72549, 1)
+theme_override_fonts/font = SubResource("FontVariation_gk0bp")
+theme_override_font_sizes/font_size = 26
+text = "2 | 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="blitz_v_box_cont" type="VBoxContainer" parent="gui_margin/gui_v_box_cont/time_modes_margin/time_modes_h_box_cont" unique_id=1485160949]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="blitz" type="Label" parent="gui_margin/gui_v_box_cont/time_modes_margin/time_modes_h_box_cont/blitz_v_box_cont" unique_id=1873359419]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.301961, 0.235294, 0.156863, 1)
+theme_override_fonts/font = SubResource("FontVariation_78ls4")
+theme_override_font_sizes/font_size = 31
+text = "Blitz"
+horizontal_alignment = 1
+
+[node name="three_minutes_button" type="TextureButton" parent="gui_margin/gui_v_box_cont/time_modes_margin/time_modes_h_box_cont/blitz_v_box_cont" unique_id=907312322]
+layout_mode = 2
+texture_normal = ExtResource("3_nf4fc")
+texture_hover = ExtResource("4_vwnqe")
+
+[node name="three_minutes" type="Label" parent="gui_margin/gui_v_box_cont/time_modes_margin/time_modes_h_box_cont/blitz_v_box_cont/three_minutes_button" unique_id=884164211]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.929412, 0.839216, 0.72549, 1)
+theme_override_fonts/font = SubResource("FontVariation_gk0bp")
+theme_override_font_sizes/font_size = 26
+text = "3min"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="three_minutes_two_button" type="TextureButton" parent="gui_margin/gui_v_box_cont/time_modes_margin/time_modes_h_box_cont/blitz_v_box_cont" unique_id=243829357]
+layout_mode = 2
+texture_normal = ExtResource("3_nf4fc")
+texture_hover = ExtResource("4_vwnqe")
+
+[node name="three_minutes_two" type="Label" parent="gui_margin/gui_v_box_cont/time_modes_margin/time_modes_h_box_cont/blitz_v_box_cont/three_minutes_two_button" unique_id=780334200]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.929412, 0.839216, 0.72549, 1)
+theme_override_fonts/font = SubResource("FontVariation_gk0bp")
+theme_override_font_sizes/font_size = 26
+text = "3 | 2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="five_minutes_button" type="TextureButton" parent="gui_margin/gui_v_box_cont/time_modes_margin/time_modes_h_box_cont/blitz_v_box_cont" unique_id=1817321986]
+layout_mode = 2
+texture_normal = ExtResource("3_nf4fc")
+texture_hover = ExtResource("4_vwnqe")
+
+[node name="five_minutes" type="Label" parent="gui_margin/gui_v_box_cont/time_modes_margin/time_modes_h_box_cont/blitz_v_box_cont/five_minutes_button" unique_id=2113716131]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.929412, 0.839216, 0.72549, 1)
+theme_override_fonts/font = SubResource("FontVariation_gk0bp")
+theme_override_font_sizes/font_size = 26
+text = "5min"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="rapid_v_box_cont3" type="VBoxContainer" parent="gui_margin/gui_v_box_cont/time_modes_margin/time_modes_h_box_cont" unique_id=252555485]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="rapid" type="Label" parent="gui_margin/gui_v_box_cont/time_modes_margin/time_modes_h_box_cont/rapid_v_box_cont3" unique_id=348223787]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.301961, 0.235294, 0.156863, 1)
+theme_override_fonts/font = SubResource("FontVariation_78ls4")
+theme_override_font_sizes/font_size = 31
+text = "Rapid"
+horizontal_alignment = 1
+
+[node name="ten_minutes_button" type="TextureButton" parent="gui_margin/gui_v_box_cont/time_modes_margin/time_modes_h_box_cont/rapid_v_box_cont3" unique_id=1612650034]
+layout_mode = 2
+texture_normal = ExtResource("3_nf4fc")
+texture_hover = ExtResource("4_vwnqe")
+
+[node name="ten_minutes" type="Label" parent="gui_margin/gui_v_box_cont/time_modes_margin/time_modes_h_box_cont/rapid_v_box_cont3/ten_minutes_button" unique_id=1817437785]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.929412, 0.839216, 0.72549, 1)
+theme_override_fonts/font = SubResource("FontVariation_gk0bp")
+theme_override_font_sizes/font_size = 26
+text = "10min"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="fifteen_minutes_ten_button" type="TextureButton" parent="gui_margin/gui_v_box_cont/time_modes_margin/time_modes_h_box_cont/rapid_v_box_cont3" unique_id=372383373]
+layout_mode = 2
+texture_normal = ExtResource("3_nf4fc")
+texture_hover = ExtResource("4_vwnqe")
+
+[node name="fifteen_minutes_ten" type="Label" parent="gui_margin/gui_v_box_cont/time_modes_margin/time_modes_h_box_cont/rapid_v_box_cont3/fifteen_minutes_ten_button" unique_id=524566546]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.929412, 0.839216, 0.72549, 1)
+theme_override_fonts/font = SubResource("FontVariation_gk0bp")
+theme_override_font_sizes/font_size = 26
+text = "15 | 10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="thirty_minutes_button" type="TextureButton" parent="gui_margin/gui_v_box_cont/time_modes_margin/time_modes_h_box_cont/rapid_v_box_cont3" unique_id=510728180]
+layout_mode = 2
+texture_normal = ExtResource("3_nf4fc")
+texture_hover = ExtResource("4_vwnqe")
+
+[node name="thirty_minutes" type="Label" parent="gui_margin/gui_v_box_cont/time_modes_margin/time_modes_h_box_cont/rapid_v_box_cont3/thirty_minutes_button" unique_id=131052809]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.929412, 0.839216, 0.72549, 1)
+theme_override_fonts/font = SubResource("FontVariation_gk0bp")
+theme_override_font_sizes/font_size = 26
+text = "30min"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="turn_v_box_cont" type="VBoxContainer" parent="gui_margin/gui_v_box_cont" unique_id=1201609859]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="turn_label" type="Label" parent="gui_margin/gui_v_box_cont/turn_v_box_cont" unique_id=1742045270]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.301961, 0.235294, 0.156863, 1)
+theme_override_fonts/font = SubResource("FontVariation_78ls4")
+theme_override_font_sizes/font_size = 26
+text = "I play with:"
+horizontal_alignment = 1
+
+[node name="turn_buttons_h_box_cont" type="HBoxContainer" parent="gui_margin/gui_v_box_cont/turn_v_box_cont" unique_id=1277638365]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="black_button" type="TextureButton" parent="gui_margin/gui_v_box_cont/turn_v_box_cont/turn_buttons_h_box_cont" unique_id=1636868607]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("3_axmix")
+texture_hover = ExtResource("4_7u6ry")
+
+[node name="random_button" type="TextureButton" parent="gui_margin/gui_v_box_cont/turn_v_box_cont/turn_buttons_h_box_cont" unique_id=1228497691]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("5_e23it")
+texture_hover = ExtResource("6_hl6be")
+
+[node name="white_button" type="TextureButton" parent="gui_margin/gui_v_box_cont/turn_v_box_cont/turn_buttons_h_box_cont" unique_id=490231620]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("7_sbet0")
+texture_hover = ExtResource("8_k81xp")
+
+[node name="play_against_ai_margin" type="MarginContainer" parent="gui_margin/gui_v_box_cont" unique_id=1526292639]
+layout_mode = 2
+theme_override_constants/margin_left = 210
+theme_override_constants/margin_right = 210
+
+[node name="play_against_ai_button" type="CheckBox" parent="gui_margin/gui_v_box_cont/play_against_ai_margin" unique_id=1098304187]
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.301961, 0.235294, 0.156863, 1)
+theme_override_colors/font_pressed_color = Color(0.301961, 0.235294, 0.156863, 1)
+theme_override_colors/font_hover_color = Color(0.4, 0.3216, 0.232, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.4, 0.321569, 0.231373, 1)
+theme_override_fonts/font = SubResource("FontVariation_78ls4")
+theme_override_font_sizes/font_size = 26
+theme_override_icons/checked = ExtResource("12_737bf")
+theme_override_icons/unchecked = ExtResource("13_ni0mf")
+text = "Play against AI"
+
+[node name="play_button_margin" type="MarginContainer" parent="gui_margin/gui_v_box_cont" unique_id=840035137]
+layout_mode = 2
+theme_override_constants/margin_left = 132
+theme_override_constants/margin_right = 132
+theme_override_constants/margin_bottom = 25
+
+[node name="play_buttom" type="TextureButton" parent="gui_margin/gui_v_box_cont/play_button_margin" unique_id=1132292763]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("3_cor1f")
+texture_hover = ExtResource("4_u77ya")
+stretch_mode = 5
+
+[node name="play_label" type="Label" parent="gui_margin/gui_v_box_cont/play_button_margin/play_buttom" unique_id=52024986]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.93, 0.83793, 0.7254, 1)
+theme_override_fonts/font = SubResource("FontVariation_jf511")
+theme_override_font_sizes/font_size = 66
+text = "PLAY"
+horizontal_alignment = 1
+
+[node name="timer_bottom_margin" type="MarginContainer" parent="gui_margin/gui_v_box_cont" unique_id=561478244]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 21
+
+[node name="timer_bottom" type="Label" parent="gui_margin/gui_v_box_cont/timer_bottom_margin" unique_id=1699197607]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.411765, 0.321569, 0.211765, 1)
+theme_override_colors/font_shadow_color = Color(0.301961, 0.235294, 0.156863, 1)
+theme_override_colors/font_outline_color = Color(0.909804, 0.788235, 0.635294, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 18
+theme_override_constants/shadow_outline_size = 13
+theme_override_fonts/font = SubResource("FontVariation_cor1f")
+theme_override_font_sizes/font_size = 80
+text = "00:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="game_controls_margin" type="MarginContainer" parent="." unique_id=1121583260]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 663
+theme_override_constants/margin_top = 267
+theme_override_constants/margin_right = 456
+theme_override_constants/margin_bottom = 267
+
+[node name="game_controls_v_box_cont" type="VBoxContainer" parent="game_controls_margin" unique_id=102281488]
+layout_mode = 2
+theme_override_constants/separation = -5
+alignment = 1
+
+[node name="back_button" type="TextureButton" parent="game_controls_margin/game_controls_v_box_cont" unique_id=1696405197]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("16_onkih")
+texture_hover = ExtResource("14_s1fa6")
+
+[node name="next_button" type="TextureButton" parent="game_controls_margin/game_controls_v_box_cont" unique_id=344929568]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("17_ni0mf")
+texture_hover = ExtResource("18_gbpkt")
+
+[node name="settings_button_margin" type="MarginContainer" parent="." unique_id=433499729]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -65.0
+offset_bottom = 65.0
+grow_horizontal = 0
+mouse_filter = 2
+theme_override_constants/margin_top = 23
+theme_override_constants/margin_right = 23
+
+[node name="settings_button" type="TextureButton" parent="settings_button_margin" unique_id=877537763]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("20_s1fa6")
+texture_hover = ExtResource("21_xt5h2")
+
+[node name="top_resign_button_margin" type="MarginContainer" parent="." unique_id=1287236647]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -65.0
+offset_bottom = 65.0
+grow_horizontal = 0
+mouse_filter = 2
+theme_override_constants/margin_top = 23
+theme_override_constants/margin_right = 367
+
+[node name="top_resign_button" type="TextureButton" parent="top_resign_button_margin" unique_id=2088512055]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("22_onkih")
+texture_hover = ExtResource("23_imf4q")
+
+[node name="bottom_resign_button_margin" type="MarginContainer" parent="." unique_id=865855810]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -78.0
+offset_top = -78.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 2
+theme_override_constants/margin_top = 23
+theme_override_constants/margin_right = 367
+theme_override_constants/margin_bottom = 23
+
+[node name="bottom_resign_button" type="TextureButton" parent="bottom_resign_button_margin" unique_id=604974958]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("24_mpgi2")
+texture_hover = ExtResource("25_dkyfh")
+
+[connection signal="pressed" from="gui_margin/gui_v_box_cont/time_modes_margin/time_modes_h_box_cont/bullet_v_box_cont/one_minute_button" to="." method="_on_one_minute_button_pressed"]
+[connection signal="pressed" from="gui_margin/gui_v_box_cont/time_modes_margin/time_modes_h_box_cont/bullet_v_box_cont/one_minute_one_button" to="." method="_on_one_minute_one_button_pressed"]
+[connection signal="pressed" from="gui_margin/gui_v_box_cont/time_modes_margin/time_modes_h_box_cont/bullet_v_box_cont/two_minute_one_button" to="." method="_on_two_minute_one_button_pressed"]
+[connection signal="pressed" from="gui_margin/gui_v_box_cont/time_modes_margin/time_modes_h_box_cont/blitz_v_box_cont/three_minutes_button" to="." method="_on_three_minutes_button_pressed"]
+[connection signal="pressed" from="gui_margin/gui_v_box_cont/time_modes_margin/time_modes_h_box_cont/blitz_v_box_cont/three_minutes_two_button" to="." method="_on_three_minutes_two_button_pressed"]
+[connection signal="pressed" from="gui_margin/gui_v_box_cont/time_modes_margin/time_modes_h_box_cont/blitz_v_box_cont/five_minutes_button" to="." method="_on_five_minutes_button_pressed"]
+[connection signal="pressed" from="gui_margin/gui_v_box_cont/time_modes_margin/time_modes_h_box_cont/rapid_v_box_cont3/ten_minutes_button" to="." method="_on_ten_minutes_button_pressed"]
+[connection signal="pressed" from="gui_margin/gui_v_box_cont/time_modes_margin/time_modes_h_box_cont/rapid_v_box_cont3/fifteen_minutes_ten_button" to="." method="_on_fifteen_minutes_ten_button_pressed"]
+[connection signal="pressed" from="gui_margin/gui_v_box_cont/time_modes_margin/time_modes_h_box_cont/rapid_v_box_cont3/thirty_minutes_button" to="." method="_on_thirty_minutes_button_pressed"]
+[connection signal="pressed" from="gui_margin/gui_v_box_cont/turn_v_box_cont/turn_buttons_h_box_cont/black_button" to="." method="_on_black_button_pressed"]
+[connection signal="pressed" from="gui_margin/gui_v_box_cont/turn_v_box_cont/turn_buttons_h_box_cont/random_button" to="." method="_on_random_button_pressed"]
+[connection signal="pressed" from="gui_margin/gui_v_box_cont/turn_v_box_cont/turn_buttons_h_box_cont/white_button" to="." method="_on_white_button_pressed"]
+[connection signal="toggled" from="gui_margin/gui_v_box_cont/play_against_ai_margin/play_against_ai_button" to="." method="_on_play_against_ai_button_toggled"]
+[connection signal="pressed" from="gui_margin/gui_v_box_cont/play_button_margin/play_buttom" to="." method="_on_play_buttom_pressed"]
+[connection signal="pressed" from="game_controls_margin/game_controls_v_box_cont/back_button" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="game_controls_margin/game_controls_v_box_cont/next_button" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="settings_button_margin/settings_button" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="top_resign_button_margin/top_resign_button" to="." method="_on_top_resign_button_pressed"]
+[connection signal="pressed" from="bottom_resign_button_margin/bottom_resign_button" to="." method="_on_bottom_resign_button_pressed"]

@@ -1,0 +1,18 @@
+import os
+
+env = Environment() #type: ignore
+
+env.Append(CXXFLAGS=[
+    "/std:c++20",
+    "/O2",         
+    "/Ox",         
+    "/W0"          
+])
+
+sources = Glob("./*.cpp") #type: ignore
+sources += Glob("./**/*.cpp") #type: ignore
+sources += Glob("./tests/**/*.cpp") #type: ignore
+sources += Glob("../engine/**/*.cpp") #type: ignore
+sources += Glob("../engine/tests/**/*.cpp") #type: ignore
+
+env.Program(target="build/chess.exe", source=sources)

@@ -1,0 +1,48 @@
+[INFO  ] [09:51:37.768015] <   > fastchess --- fastchess alpha 1.8.0 compiled for windows-latest 20260128-072859b (CI) 
+[INFO  ] [09:51:37.769845] <   > fastchess --- Setting seed to: 14196240970932439351
+[INFO  ] [09:51:37.770405] <   > fastchess --- Indexing opening suite...
+
+[INFO  ] [09:51:37.770680] <   > fastchess --- Starting tournament...
+[INFO  ] [09:53:17.862945] <   > fastchess --- Tournament was interrupted. To resume the tournament, run: D:\My Projects\Chess Engine and GUI\engine\tests\fastchess-windows-x86-64\fastchess.exe -config file=config.json
+
+[INFO  ] [09:53:17.863025] <   > fastchess --- Finished match
+
+[INFO  ] [09:53:17.863066] <   > fastchess --- Total Time: 00:01:40 (hours:minutes:seconds)
+
+
+[INFO  ] [09:53:22.122156] <   > fastchess --- fastchess alpha 1.8.0 compiled for windows-latest 20260128-072859b (CI) 
+[INFO  ] [09:53:22.123984] <   > fastchess --- Setting seed to: 4424834580309852224
+[INFO  ] [09:53:22.124376] <   > fastchess --- Indexing opening suite...
+
+[INFO  ] [09:53:22.124614] <   > fastchess --- Starting tournament...
+[INFO  ] [09:55:28.496363] <   > fastchess --- Tournament was interrupted. To resume the tournament, run: D:\My Projects\Chess Engine and GUI\engine\tests\fastchess-windows-x86-64\fastchess.exe -config file=config.json
+
+[INFO  ] [09:55:28.496441] <   > fastchess --- Finished match
+
+[INFO  ] [09:55:28.496497] <   > fastchess --- Total Time: 00:02:06 (hours:minutes:seconds)
+
+
+[INFO  ] [10:05:19.203608] <   > fastchess --- fastchess alpha 1.8.0 compiled for windows-latest 20260128-072859b (CI) 
+[INFO  ] [10:05:19.205433] <   > fastchess --- Setting seed to: 4822506508504482798
+[INFO  ] [10:05:19.205805] <   > fastchess --- Indexing opening suite...
+
+[INFO  ] [10:05:19.206051] <   > fastchess --- Starting tournament...
+[INFO  ] [10:05:30.086502] <   > fastchess --- Tournament was interrupted. To resume the tournament, run: D:\My Projects\Chess Engine and GUI\engine\tests\fastchess-windows-x86-64\fastchess.exe -config file=config.json
+
+[INFO  ] [10:05:30.086581] <   > fastchess --- Finished match
+
+[INFO  ] [10:05:30.086634] <   > fastchess --- Total Time: 00:00:10 (hours:minutes:seconds)
+
+
+[INFO  ] [10:05:45.355969] <   > fastchess --- fastchess alpha 1.8.0 compiled for windows-latest 20260128-072859b (CI) 
+[INFO  ] [10:05:45.357860] <   > fastchess --- Setting seed to: 16908721161784224431
+[INFO  ] [10:05:45.358262] <   > fastchess --- Indexing opening suite...
+
+[INFO  ] [10:05:45.358497] <   > fastchess --- Starting tournament...
+[INFO  ] [10:19:58.800597] <   > fastchess --- Tournament was interrupted. To resume the tournament, run: D:\My Projects\Chess Engine and GUI\engine\tests\fastchess-windows-x86-64\fastchess.exe -config file=config.json
+
+[INFO  ] [10:19:58.800849] <   > fastchess --- Finished match
+
+[INFO  ] [10:19:58.800919] <   > fastchess --- Total Time: 00:14:13 (hours:minutes:seconds)
+
+

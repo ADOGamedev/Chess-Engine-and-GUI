@@ -1,0 +1,316 @@
+[gd_scene format=3 uid="uid://b1wpbqupwry2f"]
+
+[ext_resource type="Script" uid="uid://dvrepuvbu06p" path="res://src/settings_menu/settings.gd" id="1_3j6r5"]
+[ext_resource type="Texture2D" uid="uid://puh0mf2q1jdh" path="res://assets/panel.png" id="1_nkug2"]
+[ext_resource type="FontFile" uid="uid://c0y1xkb5amm44" path="res://assets/Jersey10-Regular.ttf" id="2_3ykye"]
+[ext_resource type="Texture2D" uid="uid://cgeltpy45s1wk" path="res://assets/folder_button.png" id="3_gc0em"]
+[ext_resource type="FontFile" uid="uid://ce82635l2d7lv" path="res://assets/basis33.ttf" id="4_3lj6o"]
+[ext_resource type="Texture2D" uid="uid://dxium404ev0if" path="res://assets/folder_button_hover.png" id="4_cj1lu"]
+[ext_resource type="Texture2D" uid="uid://c535kjre70a7h" path="res://assets/button.png" id="5_71mqq"]
+[ext_resource type="Texture2D" uid="uid://ho4hkereq5eq" path="res://assets/button_hover.png" id="6_3j6r5"]
+[ext_resource type="Texture2D" uid="uid://bs08bid3tvhbd" path="res://assets/fen_reload_button.png" id="7_4ppmf"]
+[ext_resource type="Texture2D" uid="uid://3ofoutt1xben" path="res://assets/fen_reload_button_hover.png" id="8_uhhto"]
+
+[sub_resource type="FontVariation" id="FontVariation_gc0em"]
+base_font = ExtResource("2_3ykye")
+
+[sub_resource type="FontVariation" id="FontVariation_6mhpt"]
+base_font = ExtResource("4_3lj6o")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cj1lu"]
+bg_color = Color(0.37, 0.30266002, 0.2257, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.26, 0.20297334, 0.1378, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nkug2"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.63, 0.491085, 0.3213, 1)
+
+[sub_resource type="FontVariation" id="FontVariation_ohexs"]
+base_font = ExtResource("4_3lj6o")
+
+[sub_resource type="FontVariation" id="FontVariation_3lj6o"]
+base_font = ExtResource("2_3ykye")
+baseline_offset = -0.085
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_82xqq"]
+bg_color = Color(0.59, 0.51035, 0.413, 1)
+expand_margin_left = 5.0
+expand_margin_top = 2.0
+expand_margin_right = 5.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3lj6o"]
+bg_color = Color(0.68, 0.53924, 0.3672, 1)
+expand_margin_left = 6.0
+expand_margin_top = 2.0
+expand_margin_right = 6.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6mhpt"]
+bg_color = Color(0.59, 0.45459497, 0.2891, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.9098039, 0.7882353, 0.63529414, 1)
+expand_margin_left = 5.0
+expand_margin_top = 2.0
+expand_margin_right = 5.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ohexs"]
+bg_color = Color(0.68, 0.53924, 0.3672, 1)
+expand_margin_left = 6.0
+expand_margin_top = 2.0
+expand_margin_right = 6.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="FontVariation" id="FontVariation_71mqq"]
+base_font = ExtResource("2_3ykye")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1k4ii"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3j6r5"]
+bg_color = Color(0.36862746, 0.3019608, 0.22745098, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_71mqq"]
+bg_color = Color(0.59, 0.45459497, 0.2891, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.9098039, 0.7882353, 0.63529414, 1)
+
+[sub_resource type="Theme" id="Theme_6mhpt"]
+Button/font_sizes/font_size = 20
+Button/fonts/font = SubResource("FontVariation_gc0em")
+Button/styles/disabled = SubResource("StyleBoxFlat_82xqq")
+Button/styles/focus = null
+Button/styles/hover = SubResource("StyleBoxFlat_3lj6o")
+Button/styles/normal = SubResource("StyleBoxFlat_6mhpt")
+Button/styles/pressed = SubResource("StyleBoxFlat_ohexs")
+FileDialog/colors/file_icon_color = Color(1, 0.804, 0.58000004, 1)
+FileDialog/colors/folder_icon_color = Color(1, 0.8039216, 0.5803922, 1)
+FileDialog/colors/font_color = Color(0.3019608, 0.23529412, 0.15686275, 1)
+FileDialog/font_sizes/title_font_size = 28
+FileDialog/fonts/title_font = SubResource("FontVariation_71mqq")
+FileDialog/styles/embedded_unfocused_border = SubResource("StyleBoxFlat_1k4ii")
+FileDialog/styles/panel = SubResource("StyleBoxFlat_3j6r5")
+LineEdit/fonts/font = SubResource("FontVariation_gc0em")
+LineEdit/styles/focus = SubResource("StyleBoxFlat_nkug2")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_cj1lu")
+PopupMenu/font_sizes/font_size = 20
+PopupMenu/fonts/font = SubResource("FontVariation_gc0em")
+PopupMenu/styles/panel = SubResource("StyleBoxFlat_71mqq")
+Window/colors/title_color = Color(0.8784314, 0.7058824, 0.50980395, 1)
+
+[node name="settings" type="Control" unique_id=566966909]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3j6r5")
+
+[node name="settings_margin" type="MarginContainer" parent="." unique_id=1444095975]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 640
+
+[node name="dark_background" type="ColorRect" parent="settings_margin" unique_id=418827006]
+layout_mode = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.38039216)
+
+[node name="panel_margin" type="MarginContainer" parent="settings_margin" unique_id=1840153723]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 233
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 233
+
+[node name="settings_panel" type="TextureRect" parent="settings_margin/panel_margin" unique_id=1304569032]
+z_index = 1
+texture_filter = 1
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("1_nkug2")
+stretch_mode = 5
+
+[node name="contents_margin" type="MarginContainer" parent="settings_margin/panel_margin" unique_id=204245285]
+layout_mode = 2
+theme_override_constants/margin_left = 31
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 31
+theme_override_constants/margin_bottom = 32
+
+[node name="settings_v_box_container" type="VBoxContainer" parent="settings_margin/panel_margin/contents_margin" unique_id=373012973]
+z_index = 1
+layout_mode = 2
+mouse_filter = 2
+
+[node name="uci_path_label" type="Label" parent="settings_margin/panel_margin/contents_margin/settings_v_box_container" unique_id=284300967]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.301961, 0.235294, 0.156863, 1)
+theme_override_fonts/font = SubResource("FontVariation_gc0em")
+theme_override_font_sizes/font_size = 26
+text = "UCI Engine path"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="uci_path_h_box_cont" type="HBoxContainer" parent="settings_margin/panel_margin/contents_margin/settings_v_box_container" unique_id=1622693749]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="path_line_edit" type="LineEdit" parent="settings_margin/panel_margin/contents_margin/settings_v_box_container/uci_path_h_box_cont" unique_id=1206107101]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.77, 0.63833, 0.4774, 1)
+theme_override_colors/font_selected_color = Color(0.84, 0.71526, 0.56279993, 1)
+theme_override_colors/font_outline_color = Color(0.76862746, 0.6392157, 0.47843137, 1)
+theme_override_colors/font_placeholder_color = Color(0.88, 0.7773333, 0.6336, 0.36078432)
+theme_override_colors/selection_color = Color(0.48, 0.3904, 0.28800002, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = SubResource("FontVariation_6mhpt")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_cj1lu")
+theme_override_styles/focus = SubResource("StyleBoxFlat_nkug2")
+placeholder_text = "Path to UCI engine executable"
+alignment = 1
+
+[node name="path_button" type="TextureButton" parent="settings_margin/panel_margin/contents_margin/settings_v_box_container/uci_path_h_box_cont" unique_id=1315080844]
+texture_filter = 1
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture_normal = ExtResource("3_gc0em")
+texture_hover = ExtResource("4_cj1lu")
+stretch_mode = 4
+
+[node name="fen_label" type="Label" parent="settings_margin/panel_margin/contents_margin/settings_v_box_container" unique_id=1111884115]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.301961, 0.235294, 0.156863, 1)
+theme_override_fonts/font = SubResource("FontVariation_gc0em")
+theme_override_font_sizes/font_size = 26
+text = "FEN of current position"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="fen_h_box_cont" type="HBoxContainer" parent="settings_margin/panel_margin/contents_margin/settings_v_box_container" unique_id=1899277632]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="fen_line_edit" type="LineEdit" parent="settings_margin/panel_margin/contents_margin/settings_v_box_container/fen_h_box_cont" unique_id=81177298]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.77, 0.63833, 0.4774, 1)
+theme_override_colors/font_selected_color = Color(0.84, 0.71526, 0.56279993, 1)
+theme_override_colors/font_outline_color = Color(0.76862746, 0.6392157, 0.47843137, 1)
+theme_override_colors/selection_color = Color(0.48, 0.3904, 0.28800002, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = SubResource("FontVariation_ohexs")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_cj1lu")
+theme_override_styles/focus = SubResource("StyleBoxFlat_nkug2")
+alignment = 1
+
+[node name="fen_reload_button" type="TextureButton" parent="settings_margin/panel_margin/contents_margin/settings_v_box_container/fen_h_box_cont" unique_id=1972863603]
+texture_filter = 1
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture_normal = ExtResource("7_4ppmf")
+texture_hover = ExtResource("8_uhhto")
+stretch_mode = 4
+
+[node name="buttons_margin" type="MarginContainer" parent="settings_margin" unique_id=1706805567]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 78
+theme_override_constants/margin_top = 407
+theme_override_constants/margin_right = 78
+theme_override_constants/margin_bottom = 193
+
+[node name="buttons_h_box_cont" type="HBoxContainer" parent="settings_margin/buttons_margin" unique_id=1792783786]
+layout_mode = 2
+theme_override_constants/separation = 28
+
+[node name="apply_button" type="TextureButton" parent="settings_margin/buttons_margin/buttons_h_box_cont" unique_id=1029202152]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("5_71mqq")
+texture_hover = ExtResource("6_3j6r5")
+stretch_mode = 4
+
+[node name="apply_label" type="Label" parent="settings_margin/buttons_margin/buttons_h_box_cont/apply_button" unique_id=72194976]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.87058824, 0.73333335, 0.5647059, 1)
+theme_override_fonts/font = SubResource("FontVariation_3lj6o")
+theme_override_font_sizes/font_size = 38
+text = "Apply"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="cancel_button" type="TextureButton" parent="settings_margin/buttons_margin/buttons_h_box_cont" unique_id=1514607983]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("5_71mqq")
+texture_hover = ExtResource("6_3j6r5")
+stretch_mode = 4
+
+[node name="cancel_label" type="Label" parent="settings_margin/buttons_margin/buttons_h_box_cont/cancel_button" unique_id=489261456]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.87058824, 0.73333335, 0.5647059, 1)
+theme_override_fonts/font = SubResource("FontVariation_3lj6o")
+theme_override_font_sizes/font_size = 38
+text = "Cancel"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="file_dialog" type="FileDialog" parent="." unique_id=63203918]
+oversampling_override = 1.0
+title = "Open a File"
+initial_position = 2
+theme = SubResource("Theme_6mhpt")
+ok_button_text = "Select"
+file_mode = 0
+display_mode = 1
+access = 2
+filters = PackedStringArray("*.exe")
+
+[connection signal="pressed" from="settings_margin/panel_margin/contents_margin/settings_v_box_container/uci_path_h_box_cont/path_button" to="." method="_on_path_button_pressed"]
+[connection signal="pressed" from="settings_margin/panel_margin/contents_margin/settings_v_box_container/fen_h_box_cont/fen_reload_button" to="." method="_on_fen_reload_button_pressed"]
+[connection signal="pressed" from="settings_margin/buttons_margin/buttons_h_box_cont/apply_button" to="." method="_on_apply_button_pressed"]
+[connection signal="pressed" from="settings_margin/buttons_margin/buttons_h_box_cont/cancel_button" to="." method="_on_cancel_button_pressed"]
+[connection signal="file_selected" from="file_dialog" to="." method="_on_file_dialog_file_selected"]

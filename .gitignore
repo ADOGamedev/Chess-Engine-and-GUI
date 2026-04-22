@@ -1,0 +1,10 @@
+.vs/
+.vs/**/
+.vscode/
+ADOCE VS/
+ADOCE VS/**/**
+x64/
+build/
+ADOCE VS.*
+*.o
+*.obj

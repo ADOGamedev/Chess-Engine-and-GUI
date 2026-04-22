@@ -1,0 +1,148 @@
+[gd_scene format=3 uid="uid://dcr64rc8t0l5s"]
+
+[ext_resource type="Script" uid="uid://bb7tgdjdql2dx" path="res://promotion_menu.gd" id="1_5kd4v"]
+[ext_resource type="Texture2D" uid="uid://puh0mf2q1jdh" path="res://assets/panel.png" id="1_66876"]
+[ext_resource type="Texture2D" uid="uid://fm27em1mjn16" path="res://assets/black_knight_button.png" id="2_5kd4v"]
+[ext_resource type="Texture2D" uid="uid://di085l80g2k6h" path="res://assets/black_knight_button_hover.png" id="3_i0j0c"]
+[ext_resource type="Texture2D" uid="uid://cb0g1rstr1m3u" path="res://assets/black_bishop_button.png" id="4_4xuuw"]
+[ext_resource type="Texture2D" uid="uid://dbyn4b75js3g" path="res://assets/black_bishop_button_hover.png" id="5_0k7uf"]
+[ext_resource type="Texture2D" uid="uid://3khhi1fof342" path="res://assets/black_rook_button.png" id="6_4w4v1"]
+[ext_resource type="Texture2D" uid="uid://ssfw7uey1313" path="res://assets/black_rook_button_hover.png" id="7_d4lma"]
+[ext_resource type="Texture2D" uid="uid://ci1j17miom3n4" path="res://assets/black_queen_button.png" id="8_o7br3"]
+[ext_resource type="Texture2D" uid="uid://b8rnnqniyl1nd" path="res://assets/black_queen_button_hover.png" id="9_xrahq"]
+[ext_resource type="Texture2D" uid="uid://tdgufyquk8ob" path="res://assets/white_knight_button.png" id="10_uno7n"]
+[ext_resource type="Texture2D" uid="uid://b14emrw1a6v0x" path="res://assets/white_knight_button_hover.png" id="11_3hkyo"]
+[ext_resource type="Texture2D" uid="uid://cos10jm8awo5p" path="res://assets/white_bishop_button.png" id="12_8a4bi"]
+[ext_resource type="Texture2D" uid="uid://xvxswmma27jg" path="res://assets/white_bishop_button_hover.png" id="13_2q6a3"]
+[ext_resource type="Texture2D" uid="uid://cewbfgdbv8irn" path="res://assets/white_rook_button.png" id="14_77gyk"]
+[ext_resource type="Texture2D" uid="uid://c2a2q5e4nxn8i" path="res://assets/white_rook_button_hover.png" id="15_j831g"]
+[ext_resource type="Texture2D" uid="uid://c4ktq6tfp2m87" path="res://assets/white_queen_button.png" id="16_7peda"]
+[ext_resource type="Texture2D" uid="uid://b32p3ybcpaxy6" path="res://assets/white_queen_button_hover.png" id="17_fl11o"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wgt5e"]
+texture = ExtResource("1_66876")
+
+[node name="promotion_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5kd4v")
+
+[node name="dark_background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.262745)
+
+[node name="background" type="PanelContainer" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -80.0
+offset_right = 200.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_wgt5e")
+
+[node name="h_box_container_margin" type="MarginContainer" parent="background"]
+layout_mode = 2
+theme_override_constants/margin_left = 37
+theme_override_constants/margin_right = 37
+
+[node name="hbox_container_black" type="HBoxContainer" parent="background/h_box_container_margin"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="black_knight_button" type="TextureButton" parent="background/h_box_container_margin/hbox_container_black"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("2_5kd4v")
+texture_hover = ExtResource("3_i0j0c")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="black_bishop_button" type="TextureButton" parent="background/h_box_container_margin/hbox_container_black"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("4_4xuuw")
+texture_hover = ExtResource("5_0k7uf")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="black_rook_button" type="TextureButton" parent="background/h_box_container_margin/hbox_container_black"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("6_4w4v1")
+texture_hover = ExtResource("7_d4lma")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="black_queen_button" type="TextureButton" parent="background/h_box_container_margin/hbox_container_black"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("8_o7br3")
+texture_hover = ExtResource("9_xrahq")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="hbox_container_white" type="HBoxContainer" parent="background/h_box_container_margin"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="white_knight_button" type="TextureButton" parent="background/h_box_container_margin/hbox_container_white"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("10_uno7n")
+texture_hover = ExtResource("11_3hkyo")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="white_bishop_button" type="TextureButton" parent="background/h_box_container_margin/hbox_container_white"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("12_8a4bi")
+texture_hover = ExtResource("13_2q6a3")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="white_rook_button" type="TextureButton" parent="background/h_box_container_margin/hbox_container_white"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("14_77gyk")
+texture_hover = ExtResource("15_j831g")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="white_queen_button" type="TextureButton" parent="background/h_box_container_margin/hbox_container_white"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("16_7peda")
+texture_hover = ExtResource("17_fl11o")
+ignore_texture_size = true
+stretch_mode = 5
+
+[connection signal="pressed" from="background/h_box_container_margin/hbox_container_black/black_knight_button" to="." method="_on_black_knight_button_pressed"]
+[connection signal="pressed" from="background/h_box_container_margin/hbox_container_black/black_bishop_button" to="." method="_on_black_bishop_button_pressed"]
+[connection signal="pressed" from="background/h_box_container_margin/hbox_container_black/black_rook_button" to="." method="_on_black_rook_button_pressed"]
+[connection signal="pressed" from="background/h_box_container_margin/hbox_container_black/black_queen_button" to="." method="_on_black_queen_button_pressed"]
+[connection signal="pressed" from="background/h_box_container_margin/hbox_container_white/white_knight_button" to="." method="_on_white_knight_button_pressed"]
+[connection signal="pressed" from="background/h_box_container_margin/hbox_container_white/white_bishop_button" to="." method="_on_white_bishop_button_pressed"]
+[connection signal="pressed" from="background/h_box_container_margin/hbox_container_white/white_rook_button" to="." method="_on_white_rook_button_pressed"]
+[connection signal="pressed" from="background/h_box_container_margin/hbox_container_white/white_queen_button" to="." method="_on_white_queen_button_pressed"]
