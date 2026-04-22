@@ -60,7 +60,7 @@
     },
     "config_name": "config.json",
     "output": 0,
-    "seed": 7333299730625496396,
+    "seed": 14255994900753580549,
     "variant": 0,
     "type": 0,
     "gauntlet_seeds": 1,
@@ -88,9 +88,9 @@
     },
     "engines": [
         {
-            "name": "ADOCE FAST",
+            "name": "ADOCE FAST 2",
             "dir": "",
-            "cmd": "D:\\My Projects\\Chess Engine and GUI\\engine\\engine_versions2\\engine_fast.exe",
+            "cmd": "D:\\My Projects\\Chess Engine and GUI\\engine\\engine_versions2\\engine_fast2.exe",
             "args": "",
             "restart": false,
             "options": [],
@@ -129,16 +129,16 @@
         }
     ],
     "stats": {
-        "ADOCE FAST vs ADOCE KILLERS": {
-            "wins": 85,
-            "losses": 93,
-            "draws": 120,
-            "penta_WW": 12,
-            "penta_WD": 22,
-            "penta_WL": 39,
-            "penta_DD": 33,
-            "penta_LD": 32,
-            "penta_LL": 11
+        "ADOCE FAST 2 vs ADOCE KILLERS": {
+            "wins": 2,
+            "losses": 7,
+            "draws": 13,
+            "penta_WW": 0,
+            "penta_WD": 2,
+            "penta_WL": 0,
+            "penta_DD": 3,
+            "penta_LD": 5,
+            "penta_LL": 1
         }
     }
 }

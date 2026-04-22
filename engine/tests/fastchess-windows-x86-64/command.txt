@@ -1,5 +1,5 @@
 ./fastchess.exe 
--engine cmd="D:\My Projects\Chess Engine and GUI\engine\engine_versions2\engine_fast.exe" name="ADOCE FAST" 
+-engine cmd="D:\My Projects\Chess Engine and GUI\engine\engine_versions2\engine_fast2.exe" name="ADOCE FAST 2" 
 -engine cmd="D:\My Projects\Chess Engine and GUI\engine\engine_versions2\engine_killers.exe" name="ADOCE KILLERS" 
 -openings file=book.epd format=epd order=random 
 -each tc=8+0.8 -rounds 500000 -concurrency 8 

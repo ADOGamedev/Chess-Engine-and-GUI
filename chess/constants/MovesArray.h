@@ -8,18 +8,29 @@ template <int N>
 struct MovesArray {
     static constexpr int MAX_SIZE = N;
     int count = 0;
-    Move array[N] = {};
+    Move array[N];
 
     void push(const Move& new_move) {
         array[count] = new_move;
         count++;
     }
 
-    MovesArray<N> copy() {
-        MovesArray<N> new_array;
-        new_array.count = count;
-        std::memcpy(new_array.array, array, count * sizeof(Move));
-        return new_array;
+    MovesArray() = default;
+    MovesArray(const MovesArray& other) {
+        count = other.count;
+        if (count > 0) {
+            std::memcpy(array, other.array, count * sizeof(Move));
+        }
+    }
+
+    MovesArray& operator=(const MovesArray& other) {
+        if (this != &other) {
+            count = other.count;
+            if (count > 0) {
+                std::memcpy(array, other.array, count * sizeof(Move));
+            }
+        }
+        return *this;
     }
 
     void insert_back(const Move* from, const Move* to) {
