@@ -16,6 +16,10 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("left_click"):
 		owner.hide_game_over_message()
 		owner.hide_error_menu()
+	if Input.is_action_just_pressed("advance_move"):
+		owner.on_next_move_button_pressed()
+	if Input.is_action_just_pressed("go_back_move"):
+		owner.on_previous_move_button_pressed()
 
 func _notification(what: int) -> void:
 	if what == NOTIFICATION_WM_CLOSE_REQUEST:
@@ -54,7 +58,7 @@ func _on_bottom_resign_button_pressed() -> void:
 func _on_top_resign_button_pressed() -> void:
 	owner.apply_top_resignation();
 
-func _on_play_buttom_pressed() -> void:
+func _on_play_button_pressed() -> void:
 	owner.on_play_button_pressed()
 
 func _on_black_button_pressed() -> void:

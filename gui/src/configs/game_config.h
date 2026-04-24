@@ -2,7 +2,7 @@
 
 #include <string>
 
-inline std::string uci_engine_path = "D:\\My Projects\\Chess Engine and GUI\\engine\\engine.exe";
+inline std::string uci_engine_path = "";
 
 inline std::string starting_fen = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"; 
 inline std::string curr_fen = "";

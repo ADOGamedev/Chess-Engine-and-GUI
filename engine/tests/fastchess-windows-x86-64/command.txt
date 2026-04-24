@@ -1,6 +1,6 @@
 ./fastchess.exe 
+-engine cmd="D:\My Projects\Chess Engine and GUI\engine\engine_versions2\engine_lmr.exe" name="ADOCE LMR" 
 -engine cmd="D:\My Projects\Chess Engine and GUI\engine\engine_versions2\engine_nmp.exe" name="ADOCE NMP" 
--engine cmd="D:\My Projects\Chess Engine and GUI\engine\engine_versions2\engine_moves_heuristic_3.exe" name="ADOCE MOVES HEURISTIC 3" 
 -openings file=book.epd format=epd order=random 
 -each tc=8+0.8 -rounds 500000 -concurrency 10 
 -sprt elo0=0 elo1=10 alpha=0.05 beta=0.05 
@@ -8,9 +8,9 @@
 
 ----ELLO GUESS COMMAND----
 ./fastchess.exe 
--engine cmd="D:\My Projects\Chess Engine and GUI\engine\engine_versions2\engine_killers.exe" name="ADOCE KILLERS" 
--engine cmd="D:\My Projects\Chess Engine and GUI\predownloaded_engines\stockfish\stockfish-windows-x86-64-avx2.exe" name="STOCKFISH 2000" 
-option.UCI_LimitStrength=true option.UCI_Elo=2000 
+-engine cmd="D:\My Projects\Chess Engine and GUI\engine\engine_versions2\engine_lmr.exe" name="ADOCE LMR" 
+-engine cmd="D:\My Projects\Chess Engine and GUI\gui\project\predownloaded_engines\stockfish\stockfish-windows-x86-64-avx2.exe" name="STOCKFISH 2200" 
+option.UCI_LimitStrength=true option.UCI_Elo=2200 
 -openings file=book.epd format=epd order=random 
 -each tc=8+0.8 -rounds 1000 -concurrency 13 
 -sprt elo0=0 elo1=10 alpha=0.05 beta=0.05 

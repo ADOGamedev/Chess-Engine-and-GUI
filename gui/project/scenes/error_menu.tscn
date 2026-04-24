@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bptj35frb4lx7"]
 
-[ext_resource type="Script" uid="uid://c6tprdvg41gp8" path="res://error_menu.gd" id="1_tnr80"]
+[ext_resource type="Script" uid="uid://c6tprdvg41gp8" path="res://src/error_menu/error_menu.gd" id="1_tnr80"]
 [ext_resource type="Texture2D" uid="uid://cb25gnsy6o77j" path="res://assets/dark_panel.png" id="1_uxoun"]
 [ext_resource type="FontFile" uid="uid://ce82635l2d7lv" path="res://assets/basis33.ttf" id="3_tnr80"]
 

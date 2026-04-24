@@ -31,6 +31,7 @@ public:
     MoveGen(GameState* state) :
         state(state) {}
     
+    void reset(GameState* new_state);
     void update_available_legal_moves();
     
     bool can_move_to_square(const Square square) const;

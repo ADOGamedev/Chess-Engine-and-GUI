@@ -56,7 +56,9 @@ protected:
 
 public:
     Main() : 
-        move_gen(&state), move_legalizer(&state, move_gen, move_gen.curr_moves), timer_manager(&state, &gui),
+        move_gen(&state),
+        move_legalizer(&state, move_gen, move_gen.curr_moves),
+        timer_manager(&state, &gui),
         move_manager(&state, &move_gen, &board_renderer, &gui, &timer_manager, &uci_communicator, &sound_manager),
         board_controller(&state, &move_gen, &board_renderer, &move_manager, &timer_manager, &gui, &sound_manager) {}
         
@@ -102,16 +104,20 @@ public:
 
     GodotLogger godot_logger;
 
-    GUI gui;
 
-    BoardRenderer board_renderer;
-    BoardController board_controller;
-    TimerManager timer_manager;
     GameState state;
-    MoveGen move_gen;
-    MoveLegalizer move_legalizer;
-    MoveManager move_manager;
+    GUI gui;
     SoundManager sound_manager;
     UCIEngineCommunicator uci_communicator;
+
+    MoveGen move_gen;
+    MoveLegalizer move_legalizer;
+    BoardRenderer board_renderer;
+    TimerManager timer_manager;
+
+    MoveManager move_manager;
+    BoardController board_controller;
+
+    Colour prev_turn = WHITE;
 };
 }

@@ -213,7 +213,23 @@ int Engine::negamax(int depth, int alpha, int beta, int ply) {
         nodes_searched++;
 
         MoveExecutor::do_move(move, &state);
-        int score = -negamax(depth - 1, -beta, -alpha, ply + 1);
+
+        int score;
+        
+        bool is_late_move = i >= 4 && depth >= 3 && !move.is_capture() && !move_legalizer.is_in_check();
+
+        if (is_late_move) {
+            constexpr int reduction = 1;
+            score = -negamax(depth - 1 - reduction, -alpha - 1, -alpha, ply + 1);
+
+            if (score > alpha) {
+                score = -negamax(depth - 1, -beta, -alpha, ply + 1);
+            }
+        }
+        else {
+            score = -negamax(depth - 1, -beta, -alpha, ply + 1);
+        }
+
         MoveExecutor::undo_move(move, &state);
         
         if (score > best_score) {

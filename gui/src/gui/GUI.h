@@ -7,6 +7,8 @@
 #include "../../chess/constants/constants.h"
 #include "../configs/game_config.h"
 
+#include "../../chess/logger/Logger.h"
+
 namespace godot {
 
 class GUI {

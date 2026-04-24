@@ -80,12 +80,6 @@ void GameState::add_move_to_history(const Move& move) {
     moves_history.push_back(move);
 }
 
-void GameState::remove_last_move_from_history() {
-    if (moves_history.size() > 0) {
-        moves_history.pop_back();
-    }
-}
-
 std::string GameState::convert_moves_history_to_str() {
     std::string str = "";
 

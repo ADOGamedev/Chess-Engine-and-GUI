@@ -26,6 +26,8 @@ public:
     void handle_input(const Ref<InputEventMouseButton> &event);
     bool is_ai_turn();
 
+    void play_corresponding_sfx(const Move& move);
+
 private:
     void handle_right_click(const Ref<InputEventMouseButton> &mouse_event);
     void handle_click_on_square(const Square clicked_square);
@@ -37,8 +39,6 @@ private:
     void handle_unselection();
     void handle_selection(const Square clicked_square);
     void handle_move(const Square clicked_square);
-
-    void play_corresponding_sfx(const Move& move);
 
     bool is_left_click(const Ref<InputEventMouseButton> &mouse_event);
     bool is_right_button(const Ref<InputEventMouseButton> &mouse_event);

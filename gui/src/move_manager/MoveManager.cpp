@@ -9,7 +9,9 @@ void MoveManager::on_promotion_piece_selected(int piece) {
 
     pending_promotion_move.promotion_piece_type = piece_to_piece_type[piece];
 
+    timer_manager->add_time_increment();
     do_move_and_update_graphics(pending_promotion_move);
+    state->add_move_to_history(pending_promotion_move);
 
     if (game_started && playing_against_ai) {
         make_ai_move();
@@ -66,6 +68,7 @@ void MoveManager::make_ai_move() {
         best_move.promotion_piece_type = promotion_piece_type;
         
         do_move_and_update_graphics(best_move);
+        state->add_move_to_history(best_move);
 
         } catch (const UCIEngineException& e) {
             gui->display_error(e);
@@ -120,3 +123,4 @@ void MoveManager::clear_moves_history() {
     curr_move_index = -1;
     state->moves_history.clear();
 }
+

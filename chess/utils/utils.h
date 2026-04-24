@@ -26,6 +26,7 @@
 
 class GameState;
 
+
 void set_bit_to_1(uint64_t& num, const int bit);
 void set_bit_to_0(uint64_t& num, const  int bit);
 bool is_bit_1(const uint64_t num, const int bit);

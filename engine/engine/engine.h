@@ -18,8 +18,6 @@
 #include "../killer_moves/killer_moves.h"
 #include "../moves_history/moves_history.h"
 
-//typedef std::chrono::high_resolution_clock::time_point time_point;
-
 struct MoveList {
     std::array<Move, MAX_POSSIBLE_AVAILABLE_MOVES> moves;
     int count = 0;

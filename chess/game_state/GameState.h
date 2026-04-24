@@ -6,9 +6,10 @@
 #include <string>
 
 #include "../constants/constants.h"
-#include "../move_gen/move.h"
+#include "../move_gen/Move.h"
 #include "../utils/utils.h"
 #include "../fen_loader/FenLoader.h"
+
 
 class GameState {
 
@@ -31,7 +32,6 @@ public:
     void remove_last_key_from_repetition_list();
 
     void add_move_to_history(const Move& move);
-    void remove_last_move_from_history();
     std::string convert_moves_history_to_str();
     
     inline bool is_empty(const Square square) const {

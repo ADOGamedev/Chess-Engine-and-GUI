@@ -1,15 +1,22 @@
 [gd_scene format=3 uid="uid://b1wpbqupwry2f"]
 
 [ext_resource type="Script" uid="uid://dvrepuvbu06p" path="res://src/settings_menu/settings.gd" id="1_3j6r5"]
-[ext_resource type="Texture2D" uid="uid://puh0mf2q1jdh" path="res://assets/panel.png" id="1_nkug2"]
+[ext_resource type="Texture2D" uid="uid://di3f5qiolg8v8" path="res://assets/tall_panel.png" id="2_1g033"]
 [ext_resource type="FontFile" uid="uid://c0y1xkb5amm44" path="res://assets/Jersey10-Regular.ttf" id="2_3ykye"]
 [ext_resource type="Texture2D" uid="uid://cgeltpy45s1wk" path="res://assets/folder_button.png" id="3_gc0em"]
 [ext_resource type="FontFile" uid="uid://ce82635l2d7lv" path="res://assets/basis33.ttf" id="4_3lj6o"]
 [ext_resource type="Texture2D" uid="uid://dxium404ev0if" path="res://assets/folder_button_hover.png" id="4_cj1lu"]
 [ext_resource type="Texture2D" uid="uid://c535kjre70a7h" path="res://assets/button.png" id="5_71mqq"]
 [ext_resource type="Texture2D" uid="uid://ho4hkereq5eq" path="res://assets/button_hover.png" id="6_3j6r5"]
+[ext_resource type="Texture2D" uid="uid://bs23rsu84160j" path="res://assets/folder_button_pressed.png" id="6_ql1j0"]
 [ext_resource type="Texture2D" uid="uid://bs08bid3tvhbd" path="res://assets/fen_reload_button.png" id="7_4ppmf"]
+[ext_resource type="Texture2D" uid="uid://c53fu75lowd0u" path="res://assets/copy.png" id="7_wqwn7"]
+[ext_resource type="Texture2D" uid="uid://c5jf1qxcwgjj4" path="res://assets/copy_pressed.png" id="8_7kvyq"]
+[ext_resource type="Texture2D" uid="uid://bgcqqvyqx7wod" path="res://assets/copy_hover.png" id="8_oe2nd"]
 [ext_resource type="Texture2D" uid="uid://3ofoutt1xben" path="res://assets/fen_reload_button_hover.png" id="8_uhhto"]
+[ext_resource type="Texture2D" uid="uid://tbgx16ec4hxs" path="res://assets/slider.png" id="9_01roj"]
+[ext_resource type="Texture2D" uid="uid://175k7pylmxbd" path="res://assets/slider_hover.png" id="10_wqwn7"]
+[ext_resource type="Texture2D" uid="uid://dfm0fjh7n72gd" path="res://assets/fen_reload_button_pressed.png" id="12_6dbjw"]
 
 [sub_resource type="FontVariation" id="FontVariation_gc0em"]
 base_font = ExtResource("2_3ykye")
@@ -35,6 +42,48 @@ border_color = Color(0.63, 0.491085, 0.3213, 1)
 
 [sub_resource type="FontVariation" id="FontVariation_ohexs"]
 base_font = ExtResource("4_3lj6o")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1g033"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ppmf"]
+bg_color = Color(0.36862746, 0.3019608, 0.22745098, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.25882354, 0.20392157, 0.13725491, 1)
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uhhto"]
+bg_color = Color(0.6313726, 0.5019608, 0.34509805, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.34117648, 0.27058825, 0.1882353, 1)
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1g033"]
+bg_color = Color(0.87058824, 0.73333335, 0.5647059, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.34117648, 0.27058825, 0.1882353, 1)
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="FontVariation" id="FontVariation_1g033"]
+base_font = ExtResource("2_3ykye")
+baseline_offset = -0.1
 
 [sub_resource type="FontVariation" id="FontVariation_3lj6o"]
 base_font = ExtResource("2_3ykye")
@@ -149,20 +198,20 @@ z_index = 1
 texture_filter = 1
 layout_mode = 2
 mouse_filter = 2
-texture = ExtResource("1_nkug2")
-stretch_mode = 5
+texture = ExtResource("2_1g033")
 
 [node name="contents_margin" type="MarginContainer" parent="settings_margin/panel_margin" unique_id=204245285]
 layout_mode = 2
 theme_override_constants/margin_left = 31
 theme_override_constants/margin_top = 24
 theme_override_constants/margin_right = 31
-theme_override_constants/margin_bottom = 32
+theme_override_constants/margin_bottom = 35
 
 [node name="settings_v_box_container" type="VBoxContainer" parent="settings_margin/panel_margin/contents_margin" unique_id=373012973]
 z_index = 1
 layout_mode = 2
 mouse_filter = 2
+theme_override_constants/separation = 10
 
 [node name="uci_path_label" type="Label" parent="settings_margin/panel_margin/contents_margin/settings_v_box_container" unique_id=284300967]
 layout_mode = 2
@@ -185,7 +234,7 @@ size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.77, 0.63833, 0.4774, 1)
 theme_override_colors/font_selected_color = Color(0.84, 0.71526, 0.56279993, 1)
 theme_override_colors/font_outline_color = Color(0.76862746, 0.6392157, 0.47843137, 1)
-theme_override_colors/font_placeholder_color = Color(0.88, 0.7773333, 0.6336, 0.36078432)
+theme_override_colors/font_placeholder_color = Color(0.76862746, 0.6392157, 0.47843137, 1)
 theme_override_colors/selection_color = Color(0.48, 0.3904, 0.28800002, 1)
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = SubResource("FontVariation_6mhpt")
@@ -200,6 +249,7 @@ texture_filter = 1
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 texture_normal = ExtResource("3_gc0em")
+texture_pressed = ExtResource("6_ql1j0")
 texture_hover = ExtResource("4_cj1lu")
 stretch_mode = 4
 
@@ -213,11 +263,57 @@ text = "FEN of current position"
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[node name="fen_h_box_cont" type="HBoxContainer" parent="settings_margin/panel_margin/contents_margin/settings_v_box_container" unique_id=1899277632]
+[node name="fen_margin" type="MarginContainer" parent="settings_margin/panel_margin/contents_margin/settings_v_box_container" unique_id=911320698]
+layout_mode = 2
+theme_override_constants/margin_top = -11
+
+[node name="fen_h_box_cont" type="HBoxContainer" parent="settings_margin/panel_margin/contents_margin/settings_v_box_container/fen_margin" unique_id=1899277632]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="fen_line_edit" type="LineEdit" parent="settings_margin/panel_margin/contents_margin/settings_v_box_container/fen_h_box_cont" unique_id=81177298]
+[node name="fen_line_edit" type="LineEdit" parent="settings_margin/panel_margin/contents_margin/settings_v_box_container/fen_margin/fen_h_box_cont" unique_id=81177298]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_override_colors/font_color = Color(0.77, 0.63833, 0.4774, 1)
+theme_override_colors/font_uneditable_color = Color(0.36862746, 0.3019608, 0.22745098, 1)
+theme_override_colors/font_selected_color = Color(0.36862746, 0.3019608, 0.22745098, 1)
+theme_override_colors/font_outline_color = Color(0.36862746, 0.3019608, 0.22745098, 1)
+theme_override_colors/selection_color = Color(0.9098039, 0.7882353, 0.63529414, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = SubResource("FontVariation_ohexs")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_cj1lu")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_1g033")
+text = "8888888888888888888888888888888888888888888888888888888888888888888"
+alignment = 1
+editable = false
+
+[node name="fen_copy_button" type="TextureButton" parent="settings_margin/panel_margin/contents_margin/settings_v_box_container/fen_margin/fen_h_box_cont" unique_id=1972863603]
+texture_filter = 1
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture_normal = ExtResource("7_wqwn7")
+texture_pressed = ExtResource("8_7kvyq")
+texture_hover = ExtResource("8_oe2nd")
+stretch_mode = 4
+
+[node name="starting_fen_label" type="Label" parent="settings_margin/panel_margin/contents_margin/settings_v_box_container" unique_id=1426257122]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.301961, 0.235294, 0.156863, 1)
+theme_override_fonts/font = SubResource("FontVariation_gc0em")
+theme_override_font_sizes/font_size = 26
+text = "Starting Fen"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="starting_fen_h_box_cont" type="HBoxContainer" parent="settings_margin/panel_margin/contents_margin/settings_v_box_container" unique_id=747008251]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="starting_fen_line_edit" type="LineEdit" parent="settings_margin/panel_margin/contents_margin/settings_v_box_container/starting_fen_h_box_cont" unique_id=800486781]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -232,21 +328,69 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_cj1lu")
 theme_override_styles/focus = SubResource("StyleBoxFlat_nkug2")
 alignment = 1
 
-[node name="fen_reload_button" type="TextureButton" parent="settings_margin/panel_margin/contents_margin/settings_v_box_container/fen_h_box_cont" unique_id=1972863603]
+[node name="starting_fen_reload_button" type="TextureButton" parent="settings_margin/panel_margin/contents_margin/settings_v_box_container/starting_fen_h_box_cont" unique_id=332916413]
 texture_filter = 1
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 texture_normal = ExtResource("7_4ppmf")
+texture_pressed = ExtResource("12_6dbjw")
 texture_hover = ExtResource("8_uhhto")
 stretch_mode = 4
+
+[node name="volume_label" type="Label" parent="settings_margin/panel_margin/contents_margin/settings_v_box_container" unique_id=1956671347]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.301961, 0.235294, 0.156863, 1)
+theme_override_fonts/font = SubResource("FontVariation_gc0em")
+theme_override_font_sizes/font_size = 26
+text = "Volume"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="slider_margin" type="MarginContainer" parent="settings_margin/panel_margin/contents_margin/settings_v_box_container" unique_id=1167093790]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = -7
+theme_override_constants/margin_right = -17
+theme_override_constants/margin_bottom = -7
+
+[node name="HBoxContainer" type="HBoxContainer" parent="settings_margin/panel_margin/contents_margin/settings_v_box_container/slider_margin" unique_id=1199376683]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="volume_slider" type="HSlider" parent="settings_margin/panel_margin/contents_margin/settings_v_box_container/slider_margin/HBoxContainer" unique_id=1640620648]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/center_grabber = 100
+theme_override_icons/grabber = ExtResource("9_01roj")
+theme_override_icons/grabber_highlight = ExtResource("10_wqwn7")
+theme_override_styles/slider = SubResource("StyleBoxFlat_4ppmf")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_uhhto")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_1g033")
+value = 50.0
+
+[node name="slider_label" type="Label" parent="settings_margin/panel_margin/contents_margin/settings_v_box_container/slider_margin/HBoxContainer" unique_id=817507531]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.14
+theme_override_colors/font_color = Color(0.36862746, 0.3019608, 0.22745098, 1)
+theme_override_fonts/font = SubResource("FontVariation_1g033")
+theme_override_font_sizes/font_size = 24
+text = "50%"
+horizontal_alignment = 1
+vertical_alignment = 2
 
 [node name="buttons_margin" type="MarginContainer" parent="settings_margin" unique_id=1706805567]
 layout_mode = 2
 mouse_filter = 2
 theme_override_constants/margin_left = 78
-theme_override_constants/margin_top = 407
+theme_override_constants/margin_top = 577
 theme_override_constants/margin_right = 78
-theme_override_constants/margin_bottom = 193
+theme_override_constants/margin_bottom = 182
 
 [node name="buttons_h_box_cont" type="HBoxContainer" parent="settings_margin/buttons_margin" unique_id=1792783786]
 layout_mode = 2
@@ -309,8 +453,12 @@ display_mode = 1
 access = 2
 filters = PackedStringArray("*.exe")
 
+[connection signal="text_changed" from="settings_margin/panel_margin/contents_margin/settings_v_box_container/uci_path_h_box_cont/path_line_edit" to="." method="_on_path_line_edit_text_changed"]
 [connection signal="pressed" from="settings_margin/panel_margin/contents_margin/settings_v_box_container/uci_path_h_box_cont/path_button" to="." method="_on_path_button_pressed"]
-[connection signal="pressed" from="settings_margin/panel_margin/contents_margin/settings_v_box_container/fen_h_box_cont/fen_reload_button" to="." method="_on_fen_reload_button_pressed"]
+[connection signal="pressed" from="settings_margin/panel_margin/contents_margin/settings_v_box_container/fen_margin/fen_h_box_cont/fen_copy_button" to="." method="_on_fen_copy_button_pressed"]
+[connection signal="text_changed" from="settings_margin/panel_margin/contents_margin/settings_v_box_container/starting_fen_h_box_cont/starting_fen_line_edit" to="." method="_on_starting_fen_line_edit_text_changed"]
+[connection signal="pressed" from="settings_margin/panel_margin/contents_margin/settings_v_box_container/starting_fen_h_box_cont/starting_fen_reload_button" to="." method="_on_fen_reload_button_pressed"]
+[connection signal="value_changed" from="settings_margin/panel_margin/contents_margin/settings_v_box_container/slider_margin/HBoxContainer/volume_slider" to="." method="_on_volume_slider_value_changed"]
 [connection signal="pressed" from="settings_margin/buttons_margin/buttons_h_box_cont/apply_button" to="." method="_on_apply_button_pressed"]
 [connection signal="pressed" from="settings_margin/buttons_margin/buttons_h_box_cont/cancel_button" to="." method="_on_cancel_button_pressed"]
 [connection signal="file_selected" from="file_dialog" to="." method="_on_file_dialog_file_selected"]

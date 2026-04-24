@@ -1,5 +1,13 @@
 #include "MoveGen.h"
 
+
+void MoveGen::reset(GameState* new_state) {
+    state = new_state;
+    available_moves.fill(Move());
+    curr_moves = 0ULL;
+    available_moves_count = 0;
+}
+
 void MoveGen::update_available_legal_moves() {
     available_moves_count = 0;
 

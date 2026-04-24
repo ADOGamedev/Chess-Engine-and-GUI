@@ -123,20 +123,23 @@ void BoardController::handle_move(const Square clicked_square) {
     timer_manager->add_time_increment();
     
     move_manager->do_move_and_update_graphics(move);
+    state->add_move_to_history(move);
 
     play_corresponding_sfx(move);
 
     if (game_started && playing_against_ai) {
-        move_manager->make_ai_move();
-        play_corresponding_sfx(move);
+       move_manager->make_ai_move();
     }
 } 
 
 void BoardController::play_corresponding_sfx(const Move& move) {
+    if (!move.is_valid()) {
+        return;
+    }
     if (~state->check_mask) {
         sound_manager->play_check_sfx();
     }
-    else if (move.is_capture()) {
+    else if (move.is_capture() || move.is_en_passant()) {
         sound_manager->play_capture_sfx();
     }
     else if (move.is_castle()) {

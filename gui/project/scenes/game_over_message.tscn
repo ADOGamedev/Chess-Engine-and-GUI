@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bbwu80n0hwrn4"]
 
 [ext_resource type="Texture2D" uid="uid://puh0mf2q1jdh" path="res://assets/panel.png" id="1_5bfor"]
-[ext_resource type="Script" uid="uid://dgllols5jja5v" path="res://game_over_message.gd" id="1_luphr"]
+[ext_resource type="Script" uid="uid://dgllols5jja5v" path="res://src/game_over_message/game_over_message.gd" id="1_luphr"]
 [ext_resource type="FontFile" uid="uid://c0y1xkb5amm44" path="res://assets/Jersey10-Regular.ttf" id="2_luphr"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3u2xi"]

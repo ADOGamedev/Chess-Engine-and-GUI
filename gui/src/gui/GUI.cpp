@@ -20,7 +20,7 @@ void GUI::hide_promotion_menu() {
 void GUI::show_game_over_message(const GameOverType game_over_type) {
     godot::String message = game_over_messages[game_over_type].c_str();
 
-    game_over_message->call_deferred("display_message", message);
+    game_over_message->call("display_message", message);
 }
 
 void GUI::hide_game_over_message() {
@@ -53,6 +53,7 @@ void GUI::update_curr_fen_in_settings_menu() {
 
 void GUI::display_error(const std::exception& e) {
     error_menu->call_deferred("display_error_message", e.what());
+    game_started = false;
 }
 
 void GUI::hide_error_menu() {

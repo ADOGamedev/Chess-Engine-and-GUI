@@ -34,7 +34,7 @@ base_font = ExtResource("2_q8o8l")
 
 [sub_resource type="FontVariation" id="FontVariation_gk0bp"]
 base_font = ExtResource("2_q8o8l")
-baseline_offset = 0.035
+baseline_offset = 0.01
 
 [sub_resource type="FontVariation" id="FontVariation_jf511"]
 base_font = ExtResource("2_q8o8l")
@@ -133,6 +133,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -7.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.929412, 0.839216, 0.72549, 1)
@@ -152,6 +153,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -7.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.929412, 0.839216, 0.72549, 1)
@@ -171,6 +173,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -7.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.929412, 0.839216, 0.72549, 1)
@@ -203,6 +206,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -7.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.929412, 0.839216, 0.72549, 1)
@@ -222,6 +226,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -7.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.929412, 0.839216, 0.72549, 1)
@@ -241,6 +246,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -7.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.929412, 0.839216, 0.72549, 1)
@@ -273,6 +279,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -8.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.929412, 0.839216, 0.72549, 1)
@@ -292,6 +299,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -8.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.929412, 0.839216, 0.72549, 1)
@@ -311,6 +319,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -8.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.929412, 0.839216, 0.72549, 1)
@@ -381,7 +390,7 @@ theme_override_constants/margin_left = 132
 theme_override_constants/margin_right = 132
 theme_override_constants/margin_bottom = 25
 
-[node name="play_buttom" type="TextureButton" parent="gui_margin/gui_v_box_cont/play_button_margin" unique_id=1132292763]
+[node name="play_button" type="TextureButton" parent="gui_margin/gui_v_box_cont/play_button_margin" unique_id=1132292763]
 texture_filter = 1
 layout_mode = 2
 size_flags_vertical = 3
@@ -389,7 +398,7 @@ texture_normal = ExtResource("3_cor1f")
 texture_hover = ExtResource("4_u77ya")
 stretch_mode = 5
 
-[node name="play_label" type="Label" parent="gui_margin/gui_v_box_cont/play_button_margin/play_buttom" unique_id=52024986]
+[node name="play_label" type="Label" parent="gui_margin/gui_v_box_cont/play_button_margin/play_button" unique_id=52024986]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -530,7 +539,7 @@ texture_hover = ExtResource("25_dkyfh")
 [connection signal="pressed" from="gui_margin/gui_v_box_cont/turn_v_box_cont/turn_buttons_h_box_cont/random_button" to="." method="_on_random_button_pressed"]
 [connection signal="pressed" from="gui_margin/gui_v_box_cont/turn_v_box_cont/turn_buttons_h_box_cont/white_button" to="." method="_on_white_button_pressed"]
 [connection signal="toggled" from="gui_margin/gui_v_box_cont/play_against_ai_margin/play_against_ai_button" to="." method="_on_play_against_ai_button_toggled"]
-[connection signal="pressed" from="gui_margin/gui_v_box_cont/play_button_margin/play_buttom" to="." method="_on_play_buttom_pressed"]
+[connection signal="pressed" from="gui_margin/gui_v_box_cont/play_button_margin/play_button" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="game_controls_margin/game_controls_v_box_cont/back_button" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="game_controls_margin/game_controls_v_box_cont/next_button" to="." method="_on_next_button_pressed"]
 [connection signal="pressed" from="settings_button_margin/settings_button" to="." method="_on_settings_button_pressed"]

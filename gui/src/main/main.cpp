@@ -75,7 +75,7 @@ void Main::setup_start_position() {
     GameState prev_state = state;
     state = GameState();
 
-    move_gen = MoveGen(&state);    
+    move_gen.reset(&state);    
 
     try {
         FenLoader::load_fen(&state, starting_fen);
@@ -102,6 +102,7 @@ void Main::setup_start_position() {
     GameOverType game_over = GameOverChecker::check_game_over(state);
     if (game_over != GAME_OVER_NONE) {
         gui.show_game_over_message(game_over);
+        game_started = false;
     }
 }
 
@@ -109,6 +110,13 @@ void Main::_process(double delta) {
     if (!game_started) {
         return;
     }
+
+    if (state.turn != prev_turn && move_manager.curr_move_index >= 0) {
+        Move& move = state.moves_history[move_manager.curr_move_index];
+        board_controller.play_corresponding_sfx(move);
+    }
+
+    prev_turn = state.turn;
 
     timer_manager.update_timers(delta);
     timer_manager.update_timer_labels(board_renderer.board_flipped);
@@ -144,10 +152,24 @@ void Main::on_promotion_piece_selected(int piece) {
 }
 
 void Main::on_previous_move_button_pressed() {
-    move_manager.go_back_one_move();
+    bool should_play_sound = move_manager.curr_move_index > -1;
+
+    if (should_play_sound) {
+        Move& move = state.moves_history[move_manager.curr_move_index];
+        board_controller.play_corresponding_sfx(move);
+    }
+
+    move_manager.go_back_one_move(); 
 }
 
 void Main::on_next_move_button_pressed() {
+    bool should_play_sound = move_manager.curr_move_index + 1 < state.moves_history.size();
+
+    if (should_play_sound) {
+        Move& move = state.moves_history[move_manager.curr_move_index + 1];
+        board_controller.play_corresponding_sfx(move);
+    }
+
     move_manager.advance_one_move();
 }
 
@@ -199,17 +221,17 @@ void Main::on_white_button_pressed() {
 }
 
 void Main::set_ai_mode(bool play_against_ai) {
-    playing_against_ai = play_against_ai;
-
-    uci_communicator.end_process();
-
-    if (playing_against_ai) {
-        try {
-            uci_communicator.start_uci_engine(uci_engine_path);
-        } catch (const UCIEngineException& e) {
-            gui.display_error(e);
-            Logger::log(e.what());
+    try {
+        playing_against_ai = play_against_ai;
+        
+        uci_communicator.end_process();
+        
+        if (playing_against_ai) {
+                uci_communicator.start_uci_engine(uci_engine_path);
         }
+    } catch (const UCIEngineException& e) {
+        gui.display_error(e);
+        Logger::log(e.what());
     }
 }
 
@@ -238,16 +260,15 @@ void Main::hide_game_over_message() {
 }
 
 void Main::set_game_config(const String engine_path, const String start_fen) {
-    game_started = false;
-
     starting_fen = start_fen.utf8().get_data();
-
     uci_engine_path = engine_path.utf8().get_data();
     
-    setup_start_position();
+    if (!game_started) {
+        setup_start_position();
     
-    timer_manager.restart_timers();
-    timer_manager.update_timer_labels(board_renderer.board_flipped);
+        timer_manager.restart_timers();
+        timer_manager.update_timer_labels(board_renderer.board_flipped);
+    }
     
     set_ai_mode(playing_against_ai);
 }

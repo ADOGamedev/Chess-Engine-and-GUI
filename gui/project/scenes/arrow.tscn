@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://1x323q1dua78"]
 
-[ext_resource type="Script" uid="uid://ddtduy767b0wn" path="res://arrow.gd" id="1_acd0x"]
+[ext_resource type="Script" uid="uid://ddtduy767b0wn" path="res://src/arrow/arrow.gd" id="1_acd0x"]
 [ext_resource type="Texture2D" uid="uid://c1qjphdpyprnu" path="res://assets/arrow_segment.png" id="2_6a6ax"]
 [ext_resource type="Texture2D" uid="uid://dwm7ekv0skmdp" path="res://assets/arrow_tip.png" id="3_i4m3f"]
 

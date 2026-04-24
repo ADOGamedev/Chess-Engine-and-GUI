@@ -29,5 +29,5 @@ bool Move::is_short_castle() const {
 }   
 
 bool Move::is_valid() const {
-    return from != to;
+    return from != to && !(from & ~63 || to & ~63);
 }

@@ -7,12 +7,11 @@ void MoveExecutor::do_move(const Move& move, GameState* state) {
     state->en_passant = SQ_NONE;
     state->en_passant_capture = SQ_NONE;
     move_executor.move_piece();
+    
     state->switch_turns();
 
     ZobristHasher::set_zobrist_key_of_state(*state);
     state->add_curr_key_to_repetition_list();
-
-    state->add_move_to_history(move);
 }
 
 void MoveExecutor::undo_move(const Move& move, GameState* state) {
@@ -23,8 +22,6 @@ void MoveExecutor::undo_move(const Move& move, GameState* state) {
     
     ZobristHasher::set_zobrist_key_of_state(*state);
     state->remove_last_key_from_repetition_list();
-
-    state->remove_last_move_from_history();
 }
 
 void MoveExecutor::do_null_move(GameState* state) {
@@ -128,19 +125,18 @@ void MoveExecutor::revoke_all_castlings_for_colour(const Colour colour) const {
 
 void MoveExecutor::perform_castling_rook_move() const {
     Castling castling = king_destination_square_to_castling[move.to];
-    Colour turn_colour = state->turn;
+    Colour colour = piece_to_color[move.moved_piece];
 
     Move rook_move = castling_moves_for_rook[castling];
-    Piece piece_to_move = turn_colour == WHITE ? WHITE_ROOK : BLACK_ROOK;
+    Piece piece_to_move = colour == WHITE ? WHITE_ROOK : BLACK_ROOK;
     rook_move.moved_piece = piece_to_move;
 
     switch_piece_position(rook_move, piece_to_move);
 }
 
 void MoveExecutor::handle_promotion() const {
-    Piece promotion_piece = piece_type_to_piece[state->turn][move.promotion_piece_type];
-
     if (move.is_promotion()) {
+        Piece promotion_piece = piece_type_to_piece[state->turn][move.promotion_piece_type];
         state->remove_piece_from(move.to);
         state->place_piece_at(move.to, promotion_piece);
     }

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dcr64rc8t0l5s"]
 
-[ext_resource type="Script" uid="uid://bb7tgdjdql2dx" path="res://promotion_menu.gd" id="1_5kd4v"]
+[ext_resource type="Script" uid="uid://bb7tgdjdql2dx" path="res://src/promotion_menu/promotion_menu.gd" id="1_5kd4v"]
 [ext_resource type="Texture2D" uid="uid://puh0mf2q1jdh" path="res://assets/panel.png" id="1_66876"]
 [ext_resource type="Texture2D" uid="uid://fm27em1mjn16" path="res://assets/black_knight_button.png" id="2_5kd4v"]
 [ext_resource type="Texture2D" uid="uid://di085l80g2k6h" path="res://assets/black_knight_button_hover.png" id="3_i0j0c"]
@@ -22,7 +22,7 @@
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wgt5e"]
 texture = ExtResource("1_66876")
 
-[node name="promotion_menu" type="Control"]
+[node name="promotion_menu" type="Control" unique_id=1936035498]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -31,7 +31,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5kd4v")
 
-[node name="dark_background" type="ColorRect" parent="."]
+[node name="dark_background" type="ColorRect" parent="." unique_id=1490351094]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -40,7 +40,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.262745)
 
-[node name="background" type="PanelContainer" parent="."]
+[node name="background" type="PanelContainer" parent="." unique_id=1588380491]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -56,19 +56,19 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_wgt5e")
 
-[node name="h_box_container_margin" type="MarginContainer" parent="background"]
+[node name="h_box_container_margin" type="MarginContainer" parent="background" unique_id=1700915544]
 layout_mode = 2
 theme_override_constants/margin_left = 37
 theme_override_constants/margin_right = 37
 
-[node name="hbox_container_black" type="HBoxContainer" parent="background/h_box_container_margin"]
+[node name="hbox_container_black" type="HBoxContainer" parent="background/h_box_container_margin" unique_id=648061561]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
 theme_override_constants/separation = 4
 alignment = 1
 
-[node name="black_knight_button" type="TextureButton" parent="background/h_box_container_margin/hbox_container_black"]
+[node name="black_knight_button" type="TextureButton" parent="background/h_box_container_margin/hbox_container_black" unique_id=510981126]
 layout_mode = 2
 size_flags_horizontal = 3
 texture_normal = ExtResource("2_5kd4v")
@@ -76,7 +76,7 @@ texture_hover = ExtResource("3_i0j0c")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="black_bishop_button" type="TextureButton" parent="background/h_box_container_margin/hbox_container_black"]
+[node name="black_bishop_button" type="TextureButton" parent="background/h_box_container_margin/hbox_container_black" unique_id=632047623]
 layout_mode = 2
 size_flags_horizontal = 3
 texture_normal = ExtResource("4_4xuuw")
@@ -84,7 +84,7 @@ texture_hover = ExtResource("5_0k7uf")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="black_rook_button" type="TextureButton" parent="background/h_box_container_margin/hbox_container_black"]
+[node name="black_rook_button" type="TextureButton" parent="background/h_box_container_margin/hbox_container_black" unique_id=1682453080]
 layout_mode = 2
 size_flags_horizontal = 3
 texture_normal = ExtResource("6_4w4v1")
@@ -92,7 +92,7 @@ texture_hover = ExtResource("7_d4lma")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="black_queen_button" type="TextureButton" parent="background/h_box_container_margin/hbox_container_black"]
+[node name="black_queen_button" type="TextureButton" parent="background/h_box_container_margin/hbox_container_black" unique_id=1658067704]
 layout_mode = 2
 size_flags_horizontal = 3
 texture_normal = ExtResource("8_o7br3")
@@ -100,13 +100,13 @@ texture_hover = ExtResource("9_xrahq")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="hbox_container_white" type="HBoxContainer" parent="background/h_box_container_margin"]
+[node name="hbox_container_white" type="HBoxContainer" parent="background/h_box_container_margin" unique_id=863264130]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/separation = 4
 alignment = 1
 
-[node name="white_knight_button" type="TextureButton" parent="background/h_box_container_margin/hbox_container_white"]
+[node name="white_knight_button" type="TextureButton" parent="background/h_box_container_margin/hbox_container_white" unique_id=736084804]
 layout_mode = 2
 size_flags_horizontal = 3
 texture_normal = ExtResource("10_uno7n")
@@ -114,7 +114,7 @@ texture_hover = ExtResource("11_3hkyo")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="white_bishop_button" type="TextureButton" parent="background/h_box_container_margin/hbox_container_white"]
+[node name="white_bishop_button" type="TextureButton" parent="background/h_box_container_margin/hbox_container_white" unique_id=862985957]
 layout_mode = 2
 size_flags_horizontal = 3
 texture_normal = ExtResource("12_8a4bi")
@@ -122,7 +122,7 @@ texture_hover = ExtResource("13_2q6a3")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="white_rook_button" type="TextureButton" parent="background/h_box_container_margin/hbox_container_white"]
+[node name="white_rook_button" type="TextureButton" parent="background/h_box_container_margin/hbox_container_white" unique_id=1829797487]
 layout_mode = 2
 size_flags_horizontal = 3
 texture_normal = ExtResource("14_77gyk")
@@ -130,7 +130,7 @@ texture_hover = ExtResource("15_j831g")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="white_queen_button" type="TextureButton" parent="background/h_box_container_margin/hbox_container_white"]
+[node name="white_queen_button" type="TextureButton" parent="background/h_box_container_margin/hbox_container_white" unique_id=1029380920]
 layout_mode = 2
 size_flags_horizontal = 3
 texture_normal = ExtResource("16_7peda")
