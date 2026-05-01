@@ -12,5 +12,5 @@ int main() {
     UCIReader uci_reader = UCIReader(&engine);
 
     OpeningBook::init();
-    //uci_reader.read_input();
+    uci_reader.read_input();
 }

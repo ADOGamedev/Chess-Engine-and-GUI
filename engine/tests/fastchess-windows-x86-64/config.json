@@ -60,7 +60,7 @@
     },
     "config_name": "config.json",
     "output": 0,
-    "seed": 13069344302786862700,
+    "seed": 15369489521069917715,
     "variant": 0,
     "type": 0,
     "gauntlet_seeds": 1,
@@ -69,7 +69,7 @@
     "wait": 0,
     "autosaveinterval": 20,
     "games": 2,
-    "rounds": 1000,
+    "rounds": 500000,
     "concurrency": 13,
     "force_concurrency": false,
     "recover": false,
@@ -87,6 +87,26 @@
         "engine_coms": false
     },
     "engines": [
+        {
+            "name": "ADOCE OPENING BOOK",
+            "dir": "",
+            "cmd": "D:\\My Projects\\Chess Engine and GUI\\engine\\engine_versions2\\engine_opening_book.exe",
+            "args": "",
+            "restart": false,
+            "options": [],
+            "limit": {
+                "tc": {
+                    "increment": 800,
+                    "fixed_time": 0,
+                    "time": 8000,
+                    "moves": 0,
+                    "timemargin": 0
+                },
+                "nodes": 0,
+                "plies": 0
+            },
+            "variant": 0
+        },
         {
             "name": "ADOCE LMR",
             "dir": "",
@@ -106,48 +126,19 @@
                 "plies": 0
             },
             "variant": 0
-        },
-        {
-            "name": "STOCKFISH 2200",
-            "dir": "",
-            "cmd": "D:\\My Projects\\Chess Engine and GUI\\gui\\project\\predownloaded_engines\\stockfish\\stockfish-windows-x86-64-avx2.exe",
-            "args": "",
-            "restart": false,
-            "options": [
-                [
-                    "UCI_LimitStrength",
-                    "true"
-                ],
-                [
-                    "UCI_Elo",
-                    "2200"
-                ]
-            ],
-            "limit": {
-                "tc": {
-                    "increment": 800,
-                    "fixed_time": 0,
-                    "time": 8000,
-                    "moves": 0,
-                    "timemargin": 0
-                },
-                "nodes": 0,
-                "plies": 0
-            },
-            "variant": 0
         }
     ],
     "stats": {
-        "ADOCE LMR vs STOCKFISH 2200": {
-            "wins": 331,
-            "losses": 416,
-            "draws": 79,
-            "penta_WW": 62,
-            "penta_WD": 32,
-            "penta_WL": 175,
-            "penta_DD": 5,
-            "penta_LD": 37,
-            "penta_LL": 102
+        "ADOCE OPENING BOOK vs ADOCE LMR": {
+            "wins": 1164,
+            "losses": 1187,
+            "draws": 2437,
+            "penta_WW": 125,
+            "penta_WD": 588,
+            "penta_WL": 326,
+            "penta_DD": 629,
+            "penta_LD": 591,
+            "penta_LL": 135
         }
     }
 }

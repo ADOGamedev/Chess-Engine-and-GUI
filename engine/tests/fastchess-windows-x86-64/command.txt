@@ -1,8 +1,8 @@
 ./fastchess.exe 
+-engine cmd="D:\My Projects\Chess Engine and GUI\engine\engine_versions2\engine_opening_book.exe" name="ADOCE OPENING BOOK" 
 -engine cmd="D:\My Projects\Chess Engine and GUI\engine\engine_versions2\engine_lmr.exe" name="ADOCE LMR" 
--engine cmd="D:\My Projects\Chess Engine and GUI\engine\engine_versions2\engine_nmp.exe" name="ADOCE NMP" 
 -openings file=book.epd format=epd order=random 
--each tc=8+0.8 -rounds 500000 -concurrency 10 
+-each tc=8+0.8 -rounds 500000 -concurrency 13 
 -sprt elo0=0 elo1=10 alpha=0.05 beta=0.05 
 
 

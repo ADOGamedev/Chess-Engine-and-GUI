@@ -127,3 +127,15 @@ Games: 466, Wins: 169, Losses: 87, Draws: 210, Points: 274.0 (58.80 %)
 Ptnml(0-2): [7, 40, 81, 74, 31], WL/DD Ratio: 0.69
 LLR: 2.95 (100.1%) (-2.94, 2.94) [0.00, 10.00]
 --------------------------------------------------
+
+
+"ADOCE OPENING BOOK" vs "ADOCE LMR"
+// Not a significant change
+--------------------------------------------------
+Results of ADOCE OPENING BOOK vs ADOCE LMR (8+0.8, NULL, NULL, book.epd):
+Elo: -1.67 +/- 6.70, nElo: -2.45 +/- 9.84
+LOS: 31.27 %, DrawRatio: 39.89 %, PairsRatio: 0.98
+Games: 4788, Wins: 1164, Losses: 1187, Draws: 2437, Points: 2382.5 (49.76 %)
+Ptnml(0-2): [135, 591, 955, 588, 125], WL/DD Ratio: 0.52
+LLR: -2.95 (-100.4%) (-2.94, 2.94) [0.00, 10.00]
+--------------------------------------------------

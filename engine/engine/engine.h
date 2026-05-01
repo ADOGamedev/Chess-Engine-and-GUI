@@ -17,6 +17,7 @@
 #include "../transposition_table/transposition_table.h"
 #include "../killer_moves/killer_moves.h"
 #include "../moves_history/moves_history.h"
+#include "../opening_book/opening_book.h"
 
 struct MoveList {
     std::array<Move, MAX_POSSIBLE_AVAILABLE_MOVES> moves;
@@ -65,9 +66,7 @@ public:
     void insert_killers_if_possible(MoveList& moves, std::array<Move, KILLERS_PER_PLY>& killers);
     MoveList get_vector_of_available_captures() const;
 
-    void sort_captures(std::vector<Move>& captures) const;
     void sort_captures_array(std::array<Move, MAX_POSSIBLE_AVAILABLE_MOVES>& captures, int count) const;
-    void sort_quiets(std::vector<Move>& quiets) const;
     void sort_quiets_array(std::array<Move, MAX_POSSIBLE_AVAILABLE_MOVES>& quiets, int count) const;
     
     GameState state = GameState();

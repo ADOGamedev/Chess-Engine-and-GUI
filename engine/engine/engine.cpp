@@ -92,6 +92,12 @@ void Engine::print_info(const int& depth, const int& score) {
 }
 
 SearchResults Engine::search_best_move(int depth) {
+    if (OpeningBook::is_position_in_book(state.key)) {
+        std::string lan_move = OpeningBook::get_random_move(state.key);
+        Move move = lan_notation_to_move(lan_move);
+        return {move, 0};
+    }
+
     HashEntry hash_entry = TranspositionTable::get(state.key);
 
     prepare_move_generation();
