@@ -95,6 +95,7 @@ SearchResults Engine::search_best_move(int depth) {
     if (OpeningBook::is_position_in_book(state.key)) {
         std::string lan_move = OpeningBook::get_random_move(state.key);
         Move move = lan_notation_to_move(lan_move);
+        while (max_time != INF && !has_search_timed_out()) {}
         return {move, 0};
     }
 

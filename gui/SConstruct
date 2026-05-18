@@ -14,6 +14,10 @@ env = SConscript("godot-cpp/SConstruct") #type: ignore
 
 # tweak this if you want to use different folders, or more folders, to store your source code in.
 env.Append(CPPPATH=["src/", "../chess"])
+if env["target"] == "template_release":
+    env.Append(CCFLAGS=["/MT", "/EHsc"])
+else:
+    env.Append(CCFLAGS=["/MTd", "/EHsc"])
 
 sources = Glob("src/**/*.cpp") #type: ignore
 sources += Glob("../chess/**/*.cpp") #type: ignore
@@ -22,7 +26,7 @@ sources += Glob("../engine/uci_engine_communicator/*.cpp") #type: ignore
 
 if env["platform"] == "macos":
     library = env.SharedLibrary(
-        "project/bin/libgdexample.{}.{}.framework/libgdexample.{}.{}".format(
+        "project/bin/chess.{}.{}.framework/chess.{}.{}".format(
             env["platform"], env["target"], env["platform"], env["target"]
         ),
         source=sources,
@@ -30,18 +34,18 @@ if env["platform"] == "macos":
 elif env["platform"] == "ios":
     if env["ios_simulator"]:
         library = env.StaticLibrary(
-            "project/bin/libgdexample.{}.{}.simulator.a".format(env["platform"], env["target"]),
+            "project/bin/chess.{}.{}.simulator.a".format(env["platform"], env["target"]),
             source=sources,
         )
     else:
         library = env.StaticLibrary(
-            "project/bin/libgdexample.{}.{}.a".format(env["platform"], env["target"]),
+            "project/bin/chess.{}.{}.a".format(env["platform"], env["target"]),
             source=sources,
         )
 else:
     env.Append(CXXFLAGS=["/std:c++20"])
     library = env.SharedLibrary(
-        "project/bin/libgdexample{}{}".format(env["suffix"], env["SHLIBSUFFIX"]),
+        "project/bin/chess{}{}".format(env["suffix"], env["SHLIBSUFFIX"]),
         source=sources,
     )
 

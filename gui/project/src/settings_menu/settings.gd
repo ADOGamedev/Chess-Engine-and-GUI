@@ -1,6 +1,6 @@
 extends Control
 
-@onready var ENGINE_PATH := get_global_path("res://predownloaded_engines/adoce/engine.exe")
+@onready var ENGINE_PATH := get_global_path("res://predownloaded_engines/adoce/adoce_v1.0.exe")
 @onready var STARTING_FEN := "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
 
 @onready var file_dialog := $file_dialog
