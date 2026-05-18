@@ -24,6 +24,7 @@ file_logging/enable_file_logging=true
 [display]
 
 window/size/viewport_height=640
+window/size/mode=2
 window/size/sharp_corners=true
 window/stretch/mode="canvas_items"
 
