@@ -3,6 +3,8 @@
 
 #### Description: This is an application made in Godot 4.6 and C++ through GDExtensions[^1]. On the left there is the board where you play. On the right there are multiple options:
 
+### **Main menu**
+
 - **Time mode**: select a time mode by clicking on the corresponding button.  
 > [!NOTE]
 > The syntax `3|2` means you have 3 minutes, and after each move, 2 seconds are added to your time.
@@ -20,17 +22,19 @@
 > If you use these arrows to view a castling move, weird things may happen and it might even crash.  
 > I will fix this eventually.
 
-- **Settings menu**: accessed by clicking the gear icon in the top-right corner.
+### **Settings Menu** 
 
-    - **UCI engine path**: the path to the executable of the engine used.  
+Accessed by clicking the gear icon in the top-right corner.
+
+- **UCI engine path**: the path to the executable of the engine used.  
 > [!WARNING]
 > It must use the Universal Chess Interface (UCI)[^2] and support the basic commands. Otherwise, an error will occur.
 
-    - **FEN of current position**: the current position written in FEN[^3] notation.
+- **FEN of current position**: the current position written in FEN[^3] notation.
 
-    - **Starting FEN**: the position (written in FEN[^3] notation) from which the game will start.
+- **Starting FEN**: the position (written in FEN[^3] notation) from which the game will start.
 
-    - **Volume**: controls the volume of subtle sound effects when a piece is moved.
+- **Volume**: controls the volume of subtle sound effects when a piece is moved.
 
 ## Screenshots
 
